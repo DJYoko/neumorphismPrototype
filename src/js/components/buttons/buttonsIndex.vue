@@ -1,6 +1,6 @@
 <template>
   <div class="p-buttonsIndex">
-    <singleButton text="default mode" />
+    <singleButton text="button default mode" />
   </div>
 </template>
 

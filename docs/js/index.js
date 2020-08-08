@@ -10494,7 +10494,7 @@ module.exports = __webpack_require__(/*! ./modules/_core */ "./node_modules/core
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".p-singleButton {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border: none;\n  align-items: center;\n  background-color: #dddddd;\n  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);\n  border-radius: 50px;\n  height: 200px;\n  justify-content: center;\n  margin-right: 4rem;\n  width: 200px;\n}\n", ""]);
+exports.push([module.i, ".p-singleButton {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  border: none;\n  align-items: center;\n  background-color: #d3d3d3;\n  box-shadow: calc(2px * 3) calc(2px * 3) calc(2px * 4) 0 rgba(0, 0, 0, 0.25), calc(2px * -2) calc(2px * -2) calc(2px * 3) 0 rgba(255, 255, 255, 0.3);\n  border-radius: 8px;\n  justify-content: center;\n  padding: 20px;\n}\n.p-singleButton:focus {\n  outline: none;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12149,7 +12149,7 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "p-buttonsIndex" },
-    [_c("singleButton", { attrs: { text: "default mode" } })],
+    [_c("singleButton", { attrs: { text: "button default mode" } })],
     1
   )
 }
