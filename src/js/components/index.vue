@@ -1,13 +1,14 @@
 <template>
   <div class="p-index">
-    index
+    <buttonsIndex />
   </div>
 </template>
 
 <script>
+import buttonsIndex from './buttons/buttonsIndex'
 export default {
   name: 'index',
-  components: {},
+  components: { buttonsIndex },
   props: {},
   data: function() {
     return {}
