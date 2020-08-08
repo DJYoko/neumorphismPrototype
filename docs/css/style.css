@@ -1,4 +1,8 @@
 body {
-  margin: 0;
+  background-color: #D3D3D3;
+}
+
+.p-siteTitle {
+  text-shadow: 1px 1px 1px #fff;
 }
 
