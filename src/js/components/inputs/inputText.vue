@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss">
-$depth: px;
+$depth: 2px;
 .p-inputText {
   appearance: none;
   border: none;
