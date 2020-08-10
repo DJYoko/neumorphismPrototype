@@ -59,9 +59,29 @@
         :is-disabled="true"
       />
     </div>
-    <!-- TODO checkbox => add inline mode / block mode-->
 
-    <!-- TODO radio-->
+    <div class="p-section">
+      <h4 class="mb-3">Radio</h4>
+      <h5>block mode</h5>
+      <singleRadio class="mb-4" text="button default" />
+      <singleRadio class="mb-4" text="button checked" :is-checked="true" />
+      <singleRadio class="mb-4" text="button disabled" :is-disabled="true" />
+
+      <h5>inline mode</h5>
+      <singleRadio class="mr-4" :is-inline="true" text="button default" />
+      <singleRadio
+        class="mr-4"
+        :is-inline="true"
+        text="button checked"
+        :is-checked="true"
+      />
+      <singleRadio
+        class="mr-4"
+        :is-inline="true"
+        text="button disabled"
+        :is-disabled="true"
+      />
+    </div>
     <!-- TODO select-->
     <!-- TODO list-->
     <!-- TODO card-->
@@ -71,12 +91,19 @@
 <script>
 import singleButton from './buttons/singleButton'
 import singleCheckbox from './checkbox/singleCheckbox'
+import singleRadio from './radio/singleRadio'
 import inputText from './inputs/inputText'
 import inputTextArea from './inputs/inputTextArea'
 
 export default {
   name: 'index',
-  components: { singleButton, singleCheckbox, inputText, inputTextArea },
+  components: {
+    singleButton,
+    singleCheckbox,
+    singleRadio,
+    inputText,
+    inputTextArea,
+  },
   props: {},
   data: function() {
     return {}
