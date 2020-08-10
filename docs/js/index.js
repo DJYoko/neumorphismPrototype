@@ -12679,9 +12679,9 @@ var render = function() {
   return _c("div", { staticClass: "p-index" }, [
     _c(
       "div",
-      { staticClass: "p-buttonsIndex mb-4" },
+      { staticClass: "p-section" },
       [
-        _c("h4", [_vm._v("button")]),
+        _c("h4", { staticClass: "mb-3" }, [_vm._v("button")]),
         _vm._v(" "),
         _c("singleButton", {
           staticClass: "mr-4",
@@ -12701,12 +12701,12 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "p-inputsIndex mb-4" }, [
+    _c("div", { staticClass: "p-section" }, [
       _c(
         "div",
         { staticClass: "mb-2" },
         [
-          _c("h4", [_vm._v("input text")]),
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("input text")]),
           _vm._v(" "),
           _c("inputText", {
             staticClass: "mr-4 mb-2 w-25",
@@ -12730,7 +12730,7 @@ var render = function() {
         "div",
         { staticClass: "mb-2" },
         [
-          _c("h4", [_vm._v("input textarea")]),
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("input textarea")]),
           _vm._v(" "),
           _c("inputTextArea", {
             staticClass: "mr-4 w-25",
@@ -12753,9 +12753,9 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "mb-4" },
+      { staticClass: "p-section" },
       [
-        _c("h4", [_vm._v("checkbox")]),
+        _c("h4", { staticClass: "mb-3" }, [_vm._v("checkbox")]),
         _vm._v(" "),
         _c("h5", [_vm._v("block mode")]),
         _vm._v(" "),

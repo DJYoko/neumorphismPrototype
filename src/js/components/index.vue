@@ -1,14 +1,14 @@
 <template>
   <div class="p-index">
-    <div class="p-buttonsIndex mb-4">
-      <h4>button</h4>
+    <div class="p-section">
+      <h4 class="mb-3">button</h4>
       <singleButton class="mr-4" text="button default" />
       <singleButton class="mr-4" text="button focused" :is-focus="true" />
       <singleButton class="mr-4" text="button disabled" :is-disabled="true" />
     </div>
-    <div class="p-inputsIndex mb-4">
+    <div class="p-section">
       <div class="mb-2">
-        <h4>input text</h4>
+        <h4 class="mb-3">input text</h4>
         <inputText class="mr-4 mb-2 w-25" text="input default" />
         <inputText
           class="mr-4 mb-2 w-25"
@@ -22,7 +22,7 @@
         />
       </div>
       <div class="mb-2">
-        <h4>input textarea</h4>
+        <h4 class="mb-3">input textarea</h4>
         <inputTextArea class="mr-4 w-25" text="textarea default" />
         <inputTextArea
           class="mr-4 w-25"
@@ -37,8 +37,8 @@
       </div>
     </div>
 
-    <div class="mb-4">
-      <h4>checkbox</h4>
+    <div class="p-section">
+      <h4 class="mb-3">checkbox</h4>
       <h5>block mode</h5>
       <singleCheckbox class="mb-4" text="button default" />
       <singleCheckbox class="mb-4" text="button checked" :is-checked="true" />
