@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss">
-$baseSize: 4px;
+$depth: 2px;
 .p-inputTextArea {
   appearance: none;
   border: none;
@@ -65,8 +65,8 @@ $baseSize: 4px;
   box-shadow:
     calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
     calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-    inset calc(#{$baseSize} * 3) calc(#{$baseSize} * 3) calc(#{$baseSize} * 4) 0 rgba(0, 0, 0, 0.25),
-    inset calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.5)
+    inset calc(#{$depth} * 3) calc(#{$depth} * 3) calc(#{$depth} * 4) 0 rgba(0, 0, 0, 0.25),
+    inset calc(#{$depth} * -2) calc(#{$depth} * -2) calc(#{$depth} * 3) 0 rgba(255, 255, 255, 0.5)
   ;
   border-radius: 20px;
   justify-content: center;
@@ -81,6 +81,12 @@ $baseSize: 4px;
   &.is-focus {
     outline: none;
     // prettier-ignore
+    box-shadow:
+      calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
+      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
+      inset calc(#{$depth}) calc(#{$depth}) calc(#{$depth} * 2) 0 rgba(0, 0, 0, 0.25),
+      inset calc(0px) calc(0px) calc(#{$depth}) 0 rgba(255, 255, 255, 0.5)
+    ;
   }
 
   &:disabled,
