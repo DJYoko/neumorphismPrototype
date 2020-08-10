@@ -186,6 +186,7 @@ $shadowDepthMin: 1px;
     .p-singleCheckbox__checkbox:disabled ~ &,
     .p-singleCheckbox.is-disabled & {
       cursor: not-allowed;
+      background-color: rgba(0, 0, 0, 0.05);
     }
   }
 
