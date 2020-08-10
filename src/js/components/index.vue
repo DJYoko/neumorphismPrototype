@@ -38,10 +38,26 @@
     </div>
 
     <div class="mb-4">
-      <h4>button</h4>
-      <singleCheckbox class="mr-4" text="button default" />
-      <singleCheckbox class="mr-4" text="button checked" :is-checked="true" />
-      <singleCheckbox class="mr-4" text="button disabled" :is-disabled="true" />
+      <h4>checkbox</h4>
+      <h5>block mode</h5>
+      <singleCheckbox class="mb-4" text="button default" />
+      <singleCheckbox class="mb-4" text="button checked" :is-checked="true" />
+      <singleCheckbox class="mb-4" text="button disabled" :is-disabled="true" />
+
+      <h5>inline mode</h5>
+      <singleCheckbox class="mr-4" :is-inline="true" text="button default" />
+      <singleCheckbox
+        class="mr-4"
+        :is-inline="true"
+        text="button checked"
+        :is-checked="true"
+      />
+      <singleCheckbox
+        class="mr-4"
+        :is-inline="true"
+        text="button disabled"
+        :is-disabled="true"
+      />
     </div>
     <!-- TODO checkbox => add inline mode / block mode-->
 

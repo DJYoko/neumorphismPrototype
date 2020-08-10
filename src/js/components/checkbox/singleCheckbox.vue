@@ -40,6 +40,10 @@ export default {
       type: String,
       required: true,
     },
+    isInline: {
+      type: Boolean,
+      default: false,
+    },
     isChecked: {
       type: Boolean,
       default: false,
@@ -59,6 +63,10 @@ export default {
   computed: {
     styleClasses() {
       const classList = []
+
+      if (this.$props.isInline) {
+        classList.push('is-inline')
+      }
 
       if (this.$props.isChecked) {
         classList.push('is-checked')
@@ -80,6 +88,13 @@ export default {
 <style lang="scss">
 $shadowDepth: 4px;
 $shadowDepthMin: 1px;
+
+.p-singleCheckbox {
+  &.is-inline {
+    display: inline-block;
+  }
+}
+
 .p-singleCheckbox__label {
   cursor: pointer;
   display: block;
