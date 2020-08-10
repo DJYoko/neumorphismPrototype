@@ -1,6 +1,6 @@
 <template>
   <div class="p-buttonsIndex">
-    <h3 class="display-4">button</h3>
+    <h4>button</h4>
     <singleButton class="mr-4" text="button default" />
     <singleButton class="mr-4" text="button focused" :is-focus="true" />
     <singleButton class="mr-4" text="button disabled" :is-disabled="true" />

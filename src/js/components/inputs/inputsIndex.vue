@@ -1,14 +1,16 @@
 <template>
   <div class="p-inputsIndex">
-    <h3 class="display-4">input text</h3>
-    <inputText class="mr-4 mb-2 w-25" text="input default" />
-    <inputText
-      class="mr-4 mb-2 w-25"
-      text="input disabled"
-      :is-disabled="true"
-    />
     <div class="mb-2">
-      <h3 class="display-4">input textarea</h3>
+      <h4>input text</h4>
+      <inputText class="mr-4 mb-2 w-25" text="input default" />
+      <inputText
+        class="mr-4 mb-2 w-25"
+        text="input disabled"
+        :is-disabled="true"
+      />
+    </div>
+    <div class="mb-2">
+      <h4>input textarea</h4>
       <inputTextArea class="mr-4 w-25" text="textarea default" />
       <inputTextArea
         class="mr-4 w-25"
