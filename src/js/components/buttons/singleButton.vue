@@ -50,13 +50,13 @@ $baseSize: 4px;
   border: none;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #d3d3d3;
+  background-color: #e6e7ee;
   // prettier-ignore
   box-shadow:
     calc(#{$baseSize} * 3) calc(#{$baseSize} * 3) calc(#{$baseSize} * 4) 0 rgba(0, 0, 0, 0.25),
-    calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.3),
+    calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.5),
     inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.3)
+    inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
   ;
   border-radius: 20px;
   justify-content: center;
@@ -68,21 +68,21 @@ $baseSize: 4px;
     // prettier-ignore
     box-shadow:
       calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.3),
+      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
       inset calc(#{$baseSize} * 3) calc(#{$baseSize} * 3) calc(#{$baseSize} * 4) 0 rgba(0, 0, 0, 0.25),
-      inset calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.3)
+      inset calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.5)
     ;
   }
 
   &.is-disabled {
     cursor: not-allowed;
     box-shadow: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    // border-right: 1px solid rgba(255, 255, 255, 0.3);
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    // border-right: 1px solid rgba(255, 255, 255, 0.5);
     // border-top: 1px solid rgba(0, 0, 0, 0.25);
     // border-left: 1px solid rgba(0, 0, 0, 0.25);
   }
