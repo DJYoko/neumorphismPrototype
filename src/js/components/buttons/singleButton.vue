@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-$baseSize: 4px;
+$shadowDepth: 4px;
 .p-singleButton {
   appearance: none;
   border: none;
@@ -53,8 +53,8 @@ $baseSize: 4px;
   background-color: #e6e7ee;
   // prettier-ignore
   box-shadow:
-    calc(#{$baseSize} * 3) calc(#{$baseSize} * 3) calc(#{$baseSize} * 4) 0 rgba(0, 0, 0, 0.25),
-    calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.5),
+    calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
+    calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5),
     inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
     inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
   ;
@@ -69,8 +69,8 @@ $baseSize: 4px;
     box-shadow:
       calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
       calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-      inset calc(#{$baseSize} * 3) calc(#{$baseSize} * 3) calc(#{$baseSize} * 4) 0 rgba(0, 0, 0, 0.25),
-      inset calc(#{$baseSize} * -2) calc(#{$baseSize} * -2) calc(#{$baseSize} * 3) 0 rgba(255, 255, 255, 0.5)
+      inset calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
+      inset calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5)
     ;
   }
 

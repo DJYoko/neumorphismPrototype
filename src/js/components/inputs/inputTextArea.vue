@@ -1,6 +1,6 @@
 <template>
-  <input
-    class="p-inputText"
+  <textarea
+    class="p-inputTextArea"
     :class="styleClasses"
     :disabled="isDisabled"
     v-model="form.text"
@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss">
 $depth: 2px;
-.p-inputText {
+.p-inputTextArea {
   appearance: none;
   border: none;
   align-items: center;
