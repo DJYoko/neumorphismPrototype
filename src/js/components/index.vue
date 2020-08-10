@@ -37,7 +37,14 @@
       </div>
     </div>
 
-    <!-- TODO checkbox-->
+    <div class="mb-4">
+      <h4>button</h4>
+      <singleCheckbox class="mr-4" text="button default" />
+      <singleCheckbox class="mr-4" text="button checked" :is-checked="true" />
+      <singleCheckbox class="mr-4" text="button disabled" :is-disabled="true" />
+    </div>
+    <!-- TODO checkbox => add inline mode / block mode-->
+
     <!-- TODO radio-->
     <!-- TODO select-->
     <!-- TODO list-->
@@ -47,12 +54,13 @@
 
 <script>
 import singleButton from './buttons/singleButton'
+import singleCheckbox from './checkbox/singleCheckbox'
 import inputText from './inputs/inputText'
 import inputTextArea from './inputs/inputTextArea'
 
 export default {
   name: 'index',
-  components: { singleButton, inputText, inputTextArea },
+  components: { singleButton, singleCheckbox, inputText, inputTextArea },
   props: {},
   data: function() {
     return {}
