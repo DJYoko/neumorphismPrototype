@@ -1,4 +1,4 @@
-# neumorphismPrototype
+# NeumorphismPrototype
 Neumorphism Prototype
 
  a demo of UI design pattern "Neumorphism".
