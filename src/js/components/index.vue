@@ -82,8 +82,27 @@
         :is-disabled="true"
       />
     </div>
-    <!-- TODO select-->
-    <!-- TODO list-->
+
+    <div class="p-section">
+      <h4 class="mb-3">List</h4>
+      <list
+        :items="[
+          {
+            text: 'item 01 - no link',
+          },
+          {
+            text: 'item 02 - has inner link',
+            url: '#',
+          },
+          {
+            text: 'item 03 - has external link',
+            url: 'https://github.com/DJYoko',
+            isExternalLink: true,
+          },
+        ]"
+      />
+    </div>
+
     <!-- TODO card-->
   </div>
 </template>
@@ -94,6 +113,7 @@ import singleCheckbox from './checkbox/singleCheckbox'
 import singleRadio from './radio/singleRadio'
 import inputText from './inputs/inputText'
 import inputTextArea from './inputs/inputTextArea'
+import list from './list/list'
 
 export default {
   name: 'index',
@@ -103,6 +123,7 @@ export default {
     singleRadio,
     inputText,
     inputTextArea,
+    list,
   },
   props: {},
   data: function() {
