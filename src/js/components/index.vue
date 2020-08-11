@@ -106,14 +106,14 @@
     <div class="p-section">
       <h4 class="mb-3">Card</h4>
       <div class="row">
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4 mb-4">
           <card
             title="sample"
             text="sample text  sample text sample text sample text sample text"
             image-url="./img/B-I8kLPJ5P7.jpg"
           />
         </div>
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4 mb-4">
           <card
             title="sample with inner link"
             text="sample text sample text sample text sample text sample text"
@@ -121,7 +121,7 @@
             linkUrl="https://www.instagram.com/p/B-I8pXBpMuZ/"
           />
         </div>
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4 mb-4">
           <card
             title="sample with external link"
             text="sample text sample text sample text sample text sample text "
