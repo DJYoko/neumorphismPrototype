@@ -82,9 +82,56 @@
         :is-disabled="true"
       />
     </div>
-    <!-- TODO select-->
-    <!-- TODO list-->
-    <!-- TODO card-->
+
+    <div class="p-section">
+      <h4 class="mb-3">List</h4>
+      <list
+        :items="[
+          {
+            text: 'item 01 - no link',
+          },
+          {
+            text: 'item 02 - has inner link',
+            url: '#',
+          },
+          {
+            text: 'item 03 - has external link',
+            url: 'https://github.com/DJYoko',
+            isExternalLink: true,
+          },
+        ]"
+      />
+    </div>
+
+    <div class="p-section">
+      <h4 class="mb-3">Card</h4>
+      <div class="row">
+        <div class="col-4">
+          <card
+            title="sample"
+            text="sample text  sample text sample text sample text sample text"
+            image-url="./img/B-I8kLPJ5P7.jpg"
+          />
+        </div>
+        <div class="col-4">
+          <card
+            title="sample with inner link"
+            text="sample text sample text sample text sample text sample text"
+            image-url="./img/B-I8pXBpMuZ.jpg"
+            linkUrl="https://www.instagram.com/p/B-I8pXBpMuZ/"
+          />
+        </div>
+        <div class="col-4">
+          <card
+            title="sample with external link"
+            text="sample text sample text sample text sample text sample text "
+            image-url="./img/B-I9KRBJdDi.jpg"
+            linkUrl="https://www.instagram.com/p/B-I9KRBJdDi/"
+            :is-external-link="true"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -94,6 +141,8 @@ import singleCheckbox from './checkbox/singleCheckbox'
 import singleRadio from './radio/singleRadio'
 import inputText from './inputs/inputText'
 import inputTextArea from './inputs/inputTextArea'
+import list from './list/list'
+import card from './card/card'
 
 export default {
   name: 'index',
@@ -103,6 +152,8 @@ export default {
     singleRadio,
     inputText,
     inputTextArea,
+    list,
+    card,
   },
   props: {},
   data: function() {
