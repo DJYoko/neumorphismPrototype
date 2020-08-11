@@ -13437,7 +13437,7 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _c(
           "div",
-          { staticClass: "col-4" },
+          { staticClass: "col-md-6 col-lg-4 mb-4" },
           [
             _c("card", {
               attrs: {
@@ -13453,7 +13453,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-4" },
+          { staticClass: "col-md-6 col-lg-4 mb-4" },
           [
             _c("card", {
               attrs: {
@@ -13470,7 +13470,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-4" },
+          { staticClass: "col-md-6 col-lg-4 mb-4" },
           [
             _c("card", {
               attrs: {
