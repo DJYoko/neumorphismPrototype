@@ -197,19 +197,24 @@ export default {
             textColor: '#212529',
           },
           {
-            name: 'dark',
-            bgColor: '#212529',
-            textColor: '#e6e7ee',
+            name: 'pale',
+            bgColor: '#D5E0EE',
+            textColor: '#00327C',
           },
           {
-            name: 'navy',
-            bgColor: '#00327C',
-            textColor: '#e6e7ee',
+            name: 'turquoise',
+            bgColor: '#01D2D4',
+            textColor: '#00425D',
           },
           {
-            name: 'red',
-            bgColor: '#A51D31',
-            textColor: '#e6e7ee',
+            name: 'seashell',
+            bgColor: '#FFF5EE',
+            textColor: '#B71C1C',
+          },
+          {
+            name: 'lime',
+            bgColor: '#F9FBE7',
+            textColor: '#827717',
           },
         ]
       },
