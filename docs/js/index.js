@@ -298,6 +298,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/greeting.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/greeting.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'greeting'
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/index.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/index.vue?vue&type=script&lang=js& ***!
@@ -307,13 +337,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _buttons_singleButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons/singleButton */ "./src/js/components/buttons/singleButton.vue");
-/* harmony import */ var _checkbox_singleCheckbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox/singleCheckbox */ "./src/js/components/checkbox/singleCheckbox.vue");
-/* harmony import */ var _radio_singleRadio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./radio/singleRadio */ "./src/js/components/radio/singleRadio.vue");
-/* harmony import */ var _inputs_inputText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./inputs/inputText */ "./src/js/components/inputs/inputText.vue");
-/* harmony import */ var _inputs_inputTextArea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inputs/inputTextArea */ "./src/js/components/inputs/inputTextArea.vue");
-/* harmony import */ var _list_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./list/list */ "./src/js/components/list/list.vue");
-/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./card/card */ "./src/js/components/card/card.vue");
+/* harmony import */ var _greeting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greeting */ "./src/js/components/greeting.vue");
+/* harmony import */ var _buttons_singleButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons/singleButton */ "./src/js/components/buttons/singleButton.vue");
+/* harmony import */ var _checkbox_singleCheckbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./checkbox/singleCheckbox */ "./src/js/components/checkbox/singleCheckbox.vue");
+/* harmony import */ var _radio_singleRadio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./radio/singleRadio */ "./src/js/components/radio/singleRadio.vue");
+/* harmony import */ var _inputs_inputText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inputs/inputText */ "./src/js/components/inputs/inputText.vue");
+/* harmony import */ var _inputs_inputTextArea__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./inputs/inputTextArea */ "./src/js/components/inputs/inputTextArea.vue");
+/* harmony import */ var _list_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./list/list */ "./src/js/components/list/list.vue");
+/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./card/card */ "./src/js/components/card/card.vue");
 //
 //
 //
@@ -451,6 +482,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -461,13 +500,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'index',
   components: {
-    singleButton: _buttons_singleButton__WEBPACK_IMPORTED_MODULE_0__["default"],
-    singleCheckbox: _checkbox_singleCheckbox__WEBPACK_IMPORTED_MODULE_1__["default"],
-    singleRadio: _radio_singleRadio__WEBPACK_IMPORTED_MODULE_2__["default"],
-    inputText: _inputs_inputText__WEBPACK_IMPORTED_MODULE_3__["default"],
-    inputTextArea: _inputs_inputTextArea__WEBPACK_IMPORTED_MODULE_4__["default"],
-    list: _list_list__WEBPACK_IMPORTED_MODULE_5__["default"],
-    card: _card_card__WEBPACK_IMPORTED_MODULE_6__["default"]
+    greeting: _greeting__WEBPACK_IMPORTED_MODULE_0__["default"],
+    singleButton: _buttons_singleButton__WEBPACK_IMPORTED_MODULE_1__["default"],
+    singleCheckbox: _checkbox_singleCheckbox__WEBPACK_IMPORTED_MODULE_2__["default"],
+    singleRadio: _radio_singleRadio__WEBPACK_IMPORTED_MODULE_3__["default"],
+    inputText: _inputs_inputText__WEBPACK_IMPORTED_MODULE_4__["default"],
+    inputTextArea: _inputs_inputTextArea__WEBPACK_IMPORTED_MODULE_5__["default"],
+    list: _list_list__WEBPACK_IMPORTED_MODULE_6__["default"],
+    card: _card_card__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   props: {},
   data: function data() {
@@ -13211,6 +13251,69 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/greeting.vue?vue&type=template&id=76150e65&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/greeting.vue?vue&type=template&id=76150e65& ***!
+  \*****************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h1", { staticClass: "display-3 p-siteTitle mb-4" }, [
+        _vm._v("Neumorphism Prototype")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mb-4 p-siteDescription" }, [
+        _vm._v('\n    a demo of UI design pattern "Neumorphism". '),
+        _c("br"),
+        _vm._v("Tool, FW:\n    "),
+        _c(
+          "a",
+          { attrs: { href: "https://getbootstrap.jp/", target: "_blank" } },
+          [_vm._v("Bootstrap4")]
+        ),
+        _vm._v(",\n    "),
+        _c("a", { attrs: { href: "https://vuejs.org/", target: "_blank" } }, [
+          _vm._v("Vue.JS")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v("Source\n    "),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://github.com/DJYoko/neumorphismPrototype",
+              target: "_blank"
+            }
+          },
+          [_vm._v("https://github.com/DJYoko/neumorphismPrototype")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/index.vue?vue&type=template&id=490e9ad6&":
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/index.vue?vue&type=template&id=490e9ad6& ***!
@@ -13229,222 +13332,129 @@ var render = function() {
   return _c("div", { staticClass: "p-index" }, [
     _c(
       "div",
-      { staticClass: "p-section" },
+      { staticClass: "container" },
       [
-        _c("h4", { staticClass: "mb-3" }, [_vm._v("button")]),
+        _c("greeting"),
         _vm._v(" "),
-        _c("singleButton", {
-          staticClass: "mr-4",
-          attrs: { text: "button default" }
-        }),
-        _vm._v(" "),
-        _c("singleButton", {
-          staticClass: "mr-4",
-          attrs: { text: "button focused", "is-focus": true }
-        }),
-        _vm._v(" "),
-        _c("singleButton", {
-          staticClass: "mr-4",
-          attrs: { text: "button disabled", "is-disabled": true }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "p-section" }, [
-      _c(
-        "div",
-        { staticClass: "mb-2" },
-        [
-          _c("h4", { staticClass: "mb-3" }, [_vm._v("input text")]),
-          _vm._v(" "),
-          _c("inputText", {
-            staticClass: "mr-4 mb-2 w-25",
-            attrs: { text: "input default" }
-          }),
-          _vm._v(" "),
-          _c("inputText", {
-            staticClass: "mr-4 mb-2 w-25",
-            attrs: { text: "input focused", "is-focus": true }
-          }),
-          _vm._v(" "),
-          _c("inputText", {
-            staticClass: "mr-4 mb-2 w-25",
-            attrs: { text: "input disabled", "is-disabled": true }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "mb-2" },
-        [
-          _c("h4", { staticClass: "mb-3" }, [_vm._v("input textarea")]),
-          _vm._v(" "),
-          _c("inputTextArea", {
-            staticClass: "mr-4 w-25",
-            attrs: { text: "textarea default" }
-          }),
-          _vm._v(" "),
-          _c("inputTextArea", {
-            staticClass: "mr-4 w-25",
-            attrs: { text: "textarea focus", "is-focus": true }
-          }),
-          _vm._v(" "),
-          _c("inputTextArea", {
-            staticClass: "mr-4 w-25",
-            attrs: { text: "textarea disabled", "is-disabled": true }
-          })
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "p-section" },
-      [
-        _c("h4", { staticClass: "mb-3" }, [_vm._v("checkbox")]),
-        _vm._v(" "),
-        _c("h5", [_vm._v("block mode")]),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mb-4",
-          attrs: { text: "button default" }
-        }),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mb-4",
-          attrs: { text: "button checked", "is-checked": true }
-        }),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mb-4",
-          attrs: { text: "button disabled", "is-disabled": true }
-        }),
-        _vm._v(" "),
-        _c("h5", [_vm._v("inline mode")]),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mr-4",
-          attrs: { "is-inline": true, text: "button default" }
-        }),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mr-4",
-          attrs: {
-            "is-inline": true,
-            text: "button checked",
-            "is-checked": true
-          }
-        }),
-        _vm._v(" "),
-        _c("singleCheckbox", {
-          staticClass: "mr-4",
-          attrs: {
-            "is-inline": true,
-            text: "button disabled",
-            "is-disabled": true
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "p-section" },
-      [
-        _c("h4", { staticClass: "mb-3" }, [_vm._v("Radio")]),
-        _vm._v(" "),
-        _c("h5", [_vm._v("block mode")]),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mb-4",
-          attrs: { text: "button default" }
-        }),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mb-4",
-          attrs: { text: "button checked", "is-checked": true }
-        }),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mb-4",
-          attrs: { text: "button disabled", "is-disabled": true }
-        }),
-        _vm._v(" "),
-        _c("h5", [_vm._v("inline mode")]),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mr-4",
-          attrs: { "is-inline": true, text: "button default" }
-        }),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mr-4",
-          attrs: {
-            "is-inline": true,
-            text: "button checked",
-            "is-checked": true
-          }
-        }),
-        _vm._v(" "),
-        _c("singleRadio", {
-          staticClass: "mr-4",
-          attrs: {
-            "is-inline": true,
-            text: "button disabled",
-            "is-disabled": true
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "p-section" },
-      [
-        _c("h4", { staticClass: "mb-3" }, [_vm._v("List")]),
-        _vm._v(" "),
-        _c("list", {
-          attrs: {
-            items: [
-              {
-                text: "item 01 - no link"
-              },
-              {
-                text: "item 02 - has inner link",
-                url: "#"
-              },
-              {
-                text: "item 03 - has external link",
-                url: "https://github.com/DJYoko",
-                isExternalLink: true
-              }
-            ]
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "p-section" }, [
-      _c("h4", { staticClass: "mb-3" }, [_vm._v("Card")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
         _c(
           "div",
-          { staticClass: "col-md-6 col-lg-4 mb-4" },
+          { staticClass: "p-section" },
           [
-            _c("card", {
+            _c("h4", { staticClass: "mb-3" }, [_vm._v("button")]),
+            _vm._v(" "),
+            _c("singleButton", {
+              staticClass: "mr-4",
+              attrs: { text: "button default" }
+            }),
+            _vm._v(" "),
+            _c("singleButton", {
+              staticClass: "mr-4",
+              attrs: { text: "button focused", "is-focus": true }
+            }),
+            _vm._v(" "),
+            _c("singleButton", {
+              staticClass: "mr-4",
+              attrs: { text: "button disabled", "is-disabled": true }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "p-section" }, [
+          _c(
+            "div",
+            { staticClass: "mb-2" },
+            [
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("input text")]),
+              _vm._v(" "),
+              _c("inputText", {
+                staticClass: "mr-4 mb-2 w-25",
+                attrs: { text: "input default" }
+              }),
+              _vm._v(" "),
+              _c("inputText", {
+                staticClass: "mr-4 mb-2 w-25",
+                attrs: { text: "input focused", "is-focus": true }
+              }),
+              _vm._v(" "),
+              _c("inputText", {
+                staticClass: "mr-4 mb-2 w-25",
+                attrs: { text: "input disabled", "is-disabled": true }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mb-2" },
+            [
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("input textarea")]),
+              _vm._v(" "),
+              _c("inputTextArea", {
+                staticClass: "mr-4 w-25",
+                attrs: { text: "textarea default" }
+              }),
+              _vm._v(" "),
+              _c("inputTextArea", {
+                staticClass: "mr-4 w-25",
+                attrs: { text: "textarea focus", "is-focus": true }
+              }),
+              _vm._v(" "),
+              _c("inputTextArea", {
+                staticClass: "mr-4 w-25",
+                attrs: { text: "textarea disabled", "is-disabled": true }
+              })
+            ],
+            1
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "p-section" },
+          [
+            _c("h4", { staticClass: "mb-3" }, [_vm._v("checkbox")]),
+            _vm._v(" "),
+            _c("h5", [_vm._v("block mode")]),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mb-4",
+              attrs: { text: "button default" }
+            }),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mb-4",
+              attrs: { text: "button checked", "is-checked": true }
+            }),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mb-4",
+              attrs: { text: "button disabled", "is-disabled": true }
+            }),
+            _vm._v(" "),
+            _c("h5", [_vm._v("inline mode")]),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mr-4",
+              attrs: { "is-inline": true, text: "button default" }
+            }),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mr-4",
               attrs: {
-                title: "sample",
-                text:
-                  "sample text  sample text sample text sample text sample text",
-                "image-url": "./img/B-I8kLPJ5P7.jpg"
+                "is-inline": true,
+                text: "button checked",
+                "is-checked": true
+              }
+            }),
+            _vm._v(" "),
+            _c("singleCheckbox", {
+              staticClass: "mr-4",
+              attrs: {
+                "is-inline": true,
+                text: "button disabled",
+                "is-disabled": true
               }
             })
           ],
@@ -13453,15 +13463,49 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-md-6 col-lg-4 mb-4" },
+          { staticClass: "p-section" },
           [
-            _c("card", {
+            _c("h4", { staticClass: "mb-3" }, [_vm._v("Radio")]),
+            _vm._v(" "),
+            _c("h5", [_vm._v("block mode")]),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mb-4",
+              attrs: { text: "button default" }
+            }),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mb-4",
+              attrs: { text: "button checked", "is-checked": true }
+            }),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mb-4",
+              attrs: { text: "button disabled", "is-disabled": true }
+            }),
+            _vm._v(" "),
+            _c("h5", [_vm._v("inline mode")]),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mr-4",
+              attrs: { "is-inline": true, text: "button default" }
+            }),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mr-4",
               attrs: {
-                title: "sample with inner link",
-                text:
-                  "sample text sample text sample text sample text sample text",
-                "image-url": "./img/B-I8pXBpMuZ.jpg",
-                linkUrl: "https://www.instagram.com/p/B-I8pXBpMuZ/"
+                "is-inline": true,
+                text: "button checked",
+                "is-checked": true
+              }
+            }),
+            _vm._v(" "),
+            _c("singleRadio", {
+              staticClass: "mr-4",
+              attrs: {
+                "is-inline": true,
+                text: "button disabled",
+                "is-disabled": true
               }
             })
           ],
@@ -13470,23 +13514,91 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-md-6 col-lg-4 mb-4" },
+          { staticClass: "p-section" },
           [
-            _c("card", {
+            _c("h4", { staticClass: "mb-3" }, [_vm._v("List")]),
+            _vm._v(" "),
+            _c("list", {
               attrs: {
-                title: "sample with external link",
-                text:
-                  "sample text sample text sample text sample text sample text ",
-                "image-url": "./img/B-I9KRBJdDi.jpg",
-                linkUrl: "https://www.instagram.com/p/B-I9KRBJdDi/",
-                "is-external-link": true
+                items: [
+                  {
+                    text: "item 01 - no link"
+                  },
+                  {
+                    text: "item 02 - has inner link",
+                    url: "#"
+                  },
+                  {
+                    text: "item 03 - has external link",
+                    url: "https://github.com/DJYoko",
+                    isExternalLink: true
+                  }
+                ]
               }
             })
           ],
           1
-        )
-      ])
-    ])
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "p-section" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Card")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-6 col-lg-4 mb-4" },
+              [
+                _c("card", {
+                  attrs: {
+                    title: "sample",
+                    text:
+                      "sample text  sample text sample text sample text sample text",
+                    "image-url": "./img/B-I8kLPJ5P7.jpg"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-6 col-lg-4 mb-4" },
+              [
+                _c("card", {
+                  attrs: {
+                    title: "sample with inner link",
+                    text:
+                      "sample text sample text sample text sample text sample text",
+                    "image-url": "./img/B-I8pXBpMuZ.jpg",
+                    linkUrl: "https://www.instagram.com/p/B-I8pXBpMuZ/"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-6 col-lg-4 mb-4" },
+              [
+                _c("card", {
+                  attrs: {
+                    title: "sample with external link",
+                    text:
+                      "sample text sample text sample text sample text sample text ",
+                    "image-url": "./img/B-I9KRBJdDi.jpg",
+                    linkUrl: "https://www.instagram.com/p/B-I9KRBJdDi/",
+                    "is-external-link": true
+                  }
+                })
+              ],
+              1
+            )
+          ])
+        ])
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -26114,6 +26226,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_singleCheckbox_vue_vue_type_template_id_0303d87b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_singleCheckbox_vue_vue_type_template_id_0303d87b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/js/components/greeting.vue":
+/*!****************************************!*\
+  !*** ./src/js/components/greeting.vue ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greeting.vue?vue&type=template&id=76150e65& */ "./src/js/components/greeting.vue?vue&type=template&id=76150e65&");
+/* harmony import */ var _greeting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./greeting.vue?vue&type=script&lang=js& */ "./src/js/components/greeting.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _greeting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/js/components/greeting.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/js/components/greeting.vue?vue&type=script&lang=js&":
+/*!*****************************************************************!*\
+  !*** ./src/js/components/greeting.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_greeting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./greeting.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/greeting.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_greeting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/js/components/greeting.vue?vue&type=template&id=76150e65&":
+/*!***********************************************************************!*\
+  !*** ./src/js/components/greeting.vue?vue&type=template&id=76150e65& ***!
+  \***********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./greeting.vue?vue&type=template&id=76150e65& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/greeting.vue?vue&type=template&id=76150e65&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_greeting_vue_vue_type_template_id_76150e65___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
