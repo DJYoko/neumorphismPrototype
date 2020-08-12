@@ -8,7 +8,10 @@
   >
     <div class="container">
       <greeting />
-      <div>
+      <simpleWrapper
+        :bg-color="colorSchema[0].bgColor"
+        :text-color="colorSchema[0].textColor"
+      >
         <h2>select color mode</h2>
         <singleRadio
           v-for="item in colorSchema"
@@ -22,7 +25,7 @@
           :item-value="item.name"
           @onChange="onChangeColor"
         />
-      </div>
+      </simpleWrapper>
 
       <div class="p-section">
         <h4 class="mb-3">button</h4>
@@ -266,6 +269,7 @@ import inputText from './inputs/inputText'
 import inputTextArea from './inputs/inputTextArea'
 import list from './list/list'
 import card from './card/card'
+import simpleWrapper from './simpleWrapper/simpleWrapper'
 
 export default {
   name: 'index',
@@ -278,6 +282,7 @@ export default {
     inputTextArea,
     list,
     card,
+    simpleWrapper,
   },
   props: {
     colorSchema: {
@@ -290,9 +295,19 @@ export default {
             textColor: '#212529',
           },
           {
+            name: 'dark',
+            bgColor: '#212529',
+            textColor: '#e6e7ee',
+          },
+          {
             name: 'pale',
             bgColor: '#D5E0EE',
             textColor: '#00327C',
+          },
+          {
+            name: 'pale - reverse',
+            bgColor: '#00327C',
+            textColor: '#D5E0EE',
           },
           {
             name: 'turquoise',
@@ -300,14 +315,29 @@ export default {
             textColor: '#00425D',
           },
           {
+            name: 'turquoise - reverse',
+            bgColor: '#00425D',
+            textColor: '#01D2D4',
+          },
+          {
             name: 'seashell',
             bgColor: '#FFF5EE',
             textColor: '#B71C1C',
           },
           {
+            name: 'seashell - reverse',
+            bgColor: '#B71C1C',
+            textColor: '#FFF5EE',
+          },
+          {
             name: 'lime',
             bgColor: '#F9FBE7',
             textColor: '#827717',
+          },
+          {
+            name: 'lime - reverse',
+            bgColor: '#827717',
+            textColor: '#F9FBE7',
           },
         ]
       },
