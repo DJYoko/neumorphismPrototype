@@ -1,5 +1,10 @@
 <template>
-  <button class="p-singleButton" :class="styleClasses" :disabled="isDisabled">
+  <button
+    class="p-singleButton"
+    :class="styleClasses"
+    :disabled="isDisabled"
+    :style="colorStyles"
+  >
     {{ text }}
   </button>
 </template>
@@ -9,6 +14,14 @@ export default {
   name: 'singleButton',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       required: true,
@@ -26,6 +39,12 @@ export default {
     return {}
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     styleClasses() {
       const classList = []
 

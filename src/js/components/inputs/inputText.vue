@@ -3,6 +3,7 @@
     class="p-inputText"
     :class="styleClasses"
     :disabled="isDisabled"
+    :style="colorStyles"
     v-model="form.text"
   />
 </template>
@@ -12,6 +13,14 @@ export default {
   name: 'inputText',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       required: true,
@@ -33,6 +42,12 @@ export default {
     }
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     styleClasses() {
       const classList = []
 

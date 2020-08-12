@@ -1,5 +1,5 @@
 <template>
-  <div class="p-card">
+  <div class="p-card" :style="colorStyles">
     <div
       class="p-card__image"
       :style="`background-image:url(${imageUrl});`"
@@ -17,6 +17,14 @@ export default {
   name: 'card',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     title: {
       type: String,
       default: '',
@@ -42,6 +50,12 @@ export default {
     return {}
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     targetAttr() {
       return this.$props.isExternalLink ? '_blank' : ''
     },

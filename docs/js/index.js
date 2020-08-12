@@ -101,10 +101,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'singleButton',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       required: true
@@ -122,6 +135,12 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     styleClasses: function styleClasses() {
       var classList = [];
 
@@ -168,6 +187,14 @@ __webpack_require__.r(__webpack_exports__);
   name: 'card',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     title: {
       type: String,
       "default": ''
@@ -193,6 +220,12 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     targetAttr: function targetAttr() {
       return this.$props.isExternalLink ? '_blank' : '';
     }
@@ -242,11 +275,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'singleCheckbox',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       required: true
@@ -272,6 +312,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     styleClasses: function styleClasses() {
       var classList = [];
 
@@ -489,6 +535,121 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -509,12 +670,54 @@ __webpack_require__.r(__webpack_exports__);
     list: _list_list__WEBPACK_IMPORTED_MODULE_6__["default"],
     card: _card_card__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
-  props: {},
-  data: function data() {
-    return {};
+  props: {
+    colorSchema: {
+      type: Array,
+      "default": function _default() {
+        return [{
+          name: 'default',
+          bgColor: '#e6e7ee',
+          textColor: '#212529'
+        }, {
+          name: 'pale',
+          bgColor: '#D5E0EE',
+          textColor: '#00327C'
+        }, {
+          name: 'turquoise',
+          bgColor: '#01D2D4',
+          textColor: '#00425D'
+        }, {
+          name: 'seashell',
+          bgColor: '#FFF5EE',
+          textColor: '#B71C1C'
+        }, {
+          name: 'lime',
+          bgColor: '#F9FBE7',
+          textColor: '#827717'
+        }];
+      }
+    }
   },
-  computed: {},
-  methods: {}
+  data: function data() {
+    return {
+      selectedColorName: 'default'
+    };
+  },
+  computed: {
+    selectedColor: function selectedColor() {
+      var _this = this;
+
+      return this.$props.colorSchema.filter(function (item) {
+        return _this.selectedColorName === item.name;
+      })[0];
+    }
+  },
+  methods: {
+    onChangeColor: function onChangeColor(colorName) {
+      console.log(colorName);
+      this.selectedColorName = colorName;
+    }
+  }
 });
 
 /***/ }),
@@ -537,10 +740,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'inputText',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       required: true
@@ -562,6 +774,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     styleClasses: function styleClasses() {
       var classList = [];
 
@@ -602,10 +820,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'inputText',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       required: true
@@ -627,6 +854,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     styleClasses: function styleClasses() {
       var classList = [];
 
@@ -671,6 +904,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'list',
@@ -678,6 +913,14 @@ __webpack_require__.r(__webpack_exports__);
     listItem: _listItem__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     items: {
       type: Array,
       "default": function _default() {
@@ -712,9 +955,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'listItem',
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       "default": ''
@@ -729,6 +981,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     targetAttr: function targetAttr() {
       return this.$props.isExternalLink ? '_blank' : '';
     }
@@ -780,6 +1038,14 @@ __webpack_require__.r(__webpack_exports__);
   name: 'singleRadio',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      "default": ''
+    },
+    textColor: {
+      type: String,
+      "default": ''
+    },
     text: {
       type: String,
       required: true
@@ -795,6 +1061,18 @@ __webpack_require__.r(__webpack_exports__);
     isDisabled: {
       type: Boolean,
       "default": false
+    },
+    itemValue: {
+      type: String,
+      "default": ''
+    }
+  },
+  watch: {
+    isChecked: {
+      immediate: true,
+      handler: function handler() {
+        this.form.isChecked = this.$props.isChecked;
+      }
     }
   },
   data: function data() {
@@ -805,6 +1083,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    colorStyles: function colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor
+      };
+    },
     styleClasses: function styleClasses() {
       var classList = [];
 
@@ -823,10 +1107,11 @@ __webpack_require__.r(__webpack_exports__);
       return classList.join(' ');
     }
   },
-  created: function created() {
-    this.form.isChecked = this.$props.isChecked;
-  },
-  methods: {}
+  methods: {
+    onChange: function onChange() {
+      this.$emit('onChange', this.$props.itemValue);
+    }
+  }
 });
 
 /***/ }),
@@ -11250,7 +11535,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".p-listItem {\n  list-style: none;\n  background-color: #e6e7ee;\n}\n.p-listItem:first-child .p-listItem__link,\n.p-listItem:first-child .p-listItem__text {\n  border-radius: 20px 20px 0 0;\n}\n.p-listItem:last-child .p-listItem__link,\n.p-listItem:last-child .p-listItem__text {\n  border-radius: 0 0 20px 20px;\n  border-bottom: none;\n}\n.p-listItem .p-listItem__link,\n.p-listItem .p-listItem__text {\n  display: block;\n  padding: 16px 32px;\n  transition: all 0.2s ease-out;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.25);\n  box-shadow: calc(4px * 3) calc(4px * 3) calc(4px * 4) 0 rgba(0, 0, 0, 0.25), calc(4px * -2) calc(4px * -2) calc(4px * 3) 0 rgba(255, 255, 255, 0.5), inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25), inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5);\n}\n.p-listItem .p-listItem__link:hover {\n  text-decoration: none;\n}\n.p-listItem .p-listItem__link:active {\n  box-shadow: calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25), calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5), inset calc(4px * 3) calc(4px * 3) calc(4px * 4) 0 rgba(0, 0, 0, 0.25), inset calc(4px * -2) calc(4px * -2) calc(4px * 3) 0 rgba(255, 255, 255, 0.5);\n}\n", ""]);
+exports.push([module.i, ".p-listItem {\n  list-style: none;\n}\n.p-listItem:first-child .p-listItem__link,\n.p-listItem:first-child .p-listItem__text {\n  border-radius: 20px 20px 0 0;\n}\n.p-listItem:last-child .p-listItem__link,\n.p-listItem:last-child .p-listItem__text {\n  border-radius: 0 0 20px 20px;\n  border-bottom: none;\n}\n.p-listItem .p-listItem__link,\n.p-listItem .p-listItem__text {\n  display: block;\n  padding: 16px 32px;\n  transition: all 0.2s ease-out;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.25);\n  box-shadow: calc(4px * 3) calc(4px * 3) calc(4px * 4) 0 rgba(0, 0, 0, 0.25), calc(4px * -2) calc(4px * -2) calc(4px * 3) 0 rgba(255, 255, 255, 0.5), inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25), inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5);\n}\n.p-listItem .p-listItem__link:hover {\n  text-decoration: none;\n}\n.p-listItem .p-listItem__link:active {\n  box-shadow: calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25), calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5), inset calc(4px * 3) calc(4px * 3) calc(4px * 4) 0 rgba(0, 0, 0, 0.25), inset calc(4px * -2) calc(4px * -2) calc(4px * 3) 0 rgba(255, 255, 255, 0.5);\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -13128,6 +13413,7 @@ var render = function() {
     {
       staticClass: "p-singleButton",
       class: _vm.styleClasses,
+      style: _vm.colorStyles,
       attrs: { disabled: _vm.isDisabled }
     },
     [_vm._v("\n  " + _vm._s(_vm.text) + "\n")]
@@ -13155,7 +13441,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-card" }, [
+  return _c("div", { staticClass: "p-card", style: _vm.colorStyles }, [
     _c("div", {
       staticClass: "p-card__image",
       style: "background-image:url(" + _vm.imageUrl + ");"
@@ -13210,36 +13496,39 @@ var render = function() {
           domProps: { checked: _vm.form.isChecked }
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "p-singleCheckbox__display" }, [
-          _c("div", { staticClass: "p-singleCheckbox__checkMark" }, [
-            _c(
-              "svg",
-              {
-                staticClass: "p-singleCheckbox__checkMarkIcon bi bi-check",
-                attrs: {
-                  width: "24px",
-                  height: "24px",
-                  viewBox: "0 0 16 16",
-                  fill: "currentColor",
-                  xmlns: "http://www.w3.org/2000/svg"
-                }
-              },
-              [
-                _c("path", {
+        _c(
+          "div",
+          { staticClass: "p-singleCheckbox__display", style: _vm.colorStyles },
+          [
+            _c("div", { staticClass: "p-singleCheckbox__checkMark" }, [
+              _c(
+                "svg",
+                {
+                  staticClass: "p-singleCheckbox__checkMarkIcon bi bi-check",
                   attrs: {
-                    "fill-rule": "evenodd",
-                    d:
-                      "M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"
+                    width: "24px",
+                    height: "24px",
+                    viewBox: "0 0 16 16",
+                    xmlns: "http://www.w3.org/2000/svg"
                   }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-singleCheckbox__text" }, [
-            _vm._v("\n        " + _vm._s(_vm.text) + "\n      ")
-          ])
-        ])
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      "fill-rule": "evenodd",
+                      d:
+                        "M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-singleCheckbox__text" }, [
+              _vm._v("\n        " + _vm._s(_vm.text) + "\n      ")
+            ])
+          ]
+        )
       ])
     ]
   )
@@ -13329,57 +13618,231 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-index" }, [
-    _c(
-      "div",
-      { staticClass: "container" },
-      [
-        _c("greeting"),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "p-section" },
-          [
-            _c("h4", { staticClass: "mb-3" }, [_vm._v("button")]),
-            _vm._v(" "),
-            _c("singleButton", {
-              staticClass: "mr-4",
-              attrs: { text: "button default" }
-            }),
-            _vm._v(" "),
-            _c("singleButton", {
-              staticClass: "mr-4",
-              attrs: { text: "button focused", "is-focus": true }
-            }),
-            _vm._v(" "),
-            _c("singleButton", {
-              staticClass: "mr-4",
-              attrs: { text: "button disabled", "is-disabled": true }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-section" }, [
+  return _c(
+    "div",
+    {
+      staticClass: "p-index",
+      style: {
+        backgroundColor: _vm.selectedColor.bgColor,
+        color: _vm.selectedColor.textColor
+      }
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("greeting"),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "mb-2" },
             [
-              _c("h4", { staticClass: "mb-3" }, [_vm._v("input text")]),
+              _c("h2", [_vm._v("select color mode")]),
               _vm._v(" "),
-              _c("inputText", {
-                staticClass: "mr-4 mb-2 w-25",
-                attrs: { text: "input default" }
+              _vm._l(_vm.colorSchema, function(item) {
+                return _c("singleRadio", {
+                  key: item.index,
+                  staticClass: "mb-4 mr-4",
+                  attrs: {
+                    "is-inline": true,
+                    "is-checked": _vm.selectedColorName === item.name,
+                    text: item.name,
+                    "bg-color": item.bgColor,
+                    "text-color": item.textColor,
+                    "item-value": item.name
+                  },
+                  on: { onChange: _vm.onChangeColor }
+                })
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "p-section" },
+            [
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("button")]),
+              _vm._v(" "),
+              _c("singleButton", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button default"
+                }
               }),
               _vm._v(" "),
-              _c("inputText", {
-                staticClass: "mr-4 mb-2 w-25",
-                attrs: { text: "input focused", "is-focus": true }
+              _c("singleButton", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button focused",
+                  "is-focus": true
+                }
               }),
               _vm._v(" "),
-              _c("inputText", {
-                staticClass: "mr-4 mb-2 w-25",
-                attrs: { text: "input disabled", "is-disabled": true }
+              _c("singleButton", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button disabled",
+                  "is-disabled": true
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-section" }, [
+            _c(
+              "div",
+              { staticClass: "mb-2" },
+              [
+                _c("h4", { staticClass: "mb-3" }, [_vm._v("input text")]),
+                _vm._v(" "),
+                _c("inputText", {
+                  staticClass: "mr-4 mb-2 w-25",
+                  attrs: {
+                    text: "input default",
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                }),
+                _vm._v(" "),
+                _c("inputText", {
+                  staticClass: "mr-4 mb-2 w-25",
+                  attrs: {
+                    text: "input focused",
+                    "is-focus": true,
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                }),
+                _vm._v(" "),
+                _c("inputText", {
+                  staticClass: "mr-4 mb-2 w-25",
+                  attrs: {
+                    text: "input disabled",
+                    "is-disabled": true,
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "mb-2" },
+              [
+                _c("h4", { staticClass: "mb-3" }, [_vm._v("input textarea")]),
+                _vm._v(" "),
+                _c("inputTextArea", {
+                  staticClass: "mr-4 w-25",
+                  attrs: {
+                    text: "textarea default",
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                }),
+                _vm._v(" "),
+                _c("inputTextArea", {
+                  staticClass: "mr-4 w-25",
+                  attrs: {
+                    text: "textarea focus",
+                    "is-focus": true,
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                }),
+                _vm._v(" "),
+                _c("inputTextArea", {
+                  staticClass: "mr-4 w-25",
+                  attrs: {
+                    text: "textarea disabled",
+                    "is-disabled": true,
+                    "bg-color": _vm.selectedColor.bgColor,
+                    "text-color": _vm.selectedColor.textColor
+                  }
+                })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "p-section" },
+            [
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("checkbox")]),
+              _vm._v(" "),
+              _c("h5", [_vm._v("block mode")]),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button default"
+                }
+              }),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button checked",
+                  "is-checked": true
+                }
+              }),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button disabled",
+                  "is-disabled": true
+                }
+              }),
+              _vm._v(" "),
+              _c("h5", [_vm._v("inline mode")]),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button default"
+                }
+              }),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button checked",
+                  "is-checked": true
+                }
+              }),
+              _vm._v(" "),
+              _c("singleCheckbox", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button disabled",
+                  "is-disabled": true
+                }
               })
             ],
             1
@@ -13387,219 +13850,175 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "mb-2" },
+            { staticClass: "p-section" },
             [
-              _c("h4", { staticClass: "mb-3" }, [_vm._v("input textarea")]),
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("Radio")]),
               _vm._v(" "),
-              _c("inputTextArea", {
-                staticClass: "mr-4 w-25",
-                attrs: { text: "textarea default" }
+              _c("h5", [_vm._v("block mode")]),
+              _vm._v(" "),
+              _c("singleRadio", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button default"
+                }
               }),
               _vm._v(" "),
-              _c("inputTextArea", {
-                staticClass: "mr-4 w-25",
-                attrs: { text: "textarea focus", "is-focus": true }
+              _c("singleRadio", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button checked",
+                  "is-checked": true
+                }
               }),
               _vm._v(" "),
-              _c("inputTextArea", {
-                staticClass: "mr-4 w-25",
-                attrs: { text: "textarea disabled", "is-disabled": true }
+              _c("singleRadio", {
+                staticClass: "mb-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  text: "button disabled",
+                  "is-disabled": true
+                }
+              }),
+              _vm._v(" "),
+              _c("h5", [_vm._v("inline mode")]),
+              _vm._v(" "),
+              _c("singleRadio", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button default"
+                }
+              }),
+              _vm._v(" "),
+              _c("singleRadio", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button checked",
+                  "is-checked": true
+                }
+              }),
+              _vm._v(" "),
+              _c("singleRadio", {
+                staticClass: "mr-4",
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  "is-inline": true,
+                  text: "button disabled",
+                  "is-disabled": true
+                }
               })
             ],
             1
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "p-section" },
-          [
-            _c("h4", { staticClass: "mb-3" }, [_vm._v("checkbox")]),
-            _vm._v(" "),
-            _c("h5", [_vm._v("block mode")]),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mb-4",
-              attrs: { text: "button default" }
-            }),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mb-4",
-              attrs: { text: "button checked", "is-checked": true }
-            }),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mb-4",
-              attrs: { text: "button disabled", "is-disabled": true }
-            }),
-            _vm._v(" "),
-            _c("h5", [_vm._v("inline mode")]),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mr-4",
-              attrs: { "is-inline": true, text: "button default" }
-            }),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mr-4",
-              attrs: {
-                "is-inline": true,
-                text: "button checked",
-                "is-checked": true
-              }
-            }),
-            _vm._v(" "),
-            _c("singleCheckbox", {
-              staticClass: "mr-4",
-              attrs: {
-                "is-inline": true,
-                text: "button disabled",
-                "is-disabled": true
-              }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "p-section" },
-          [
-            _c("h4", { staticClass: "mb-3" }, [_vm._v("Radio")]),
-            _vm._v(" "),
-            _c("h5", [_vm._v("block mode")]),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mb-4",
-              attrs: { text: "button default" }
-            }),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mb-4",
-              attrs: { text: "button checked", "is-checked": true }
-            }),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mb-4",
-              attrs: { text: "button disabled", "is-disabled": true }
-            }),
-            _vm._v(" "),
-            _c("h5", [_vm._v("inline mode")]),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mr-4",
-              attrs: { "is-inline": true, text: "button default" }
-            }),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mr-4",
-              attrs: {
-                "is-inline": true,
-                text: "button checked",
-                "is-checked": true
-              }
-            }),
-            _vm._v(" "),
-            _c("singleRadio", {
-              staticClass: "mr-4",
-              attrs: {
-                "is-inline": true,
-                text: "button disabled",
-                "is-disabled": true
-              }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "p-section" },
-          [
-            _c("h4", { staticClass: "mb-3" }, [_vm._v("List")]),
-            _vm._v(" "),
-            _c("list", {
-              attrs: {
-                items: [
-                  {
-                    text: "item 01 - no link"
-                  },
-                  {
-                    text: "item 02 - has inner link",
-                    url: "#"
-                  },
-                  {
-                    text: "item 03 - has external link",
-                    url: "https://github.com/DJYoko",
-                    isExternalLink: true
-                  }
-                ]
-              }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-section" }, [
-          _c("h4", { staticClass: "mb-3" }, [_vm._v("Card")]),
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-md-6 col-lg-4 mb-4" },
-              [
-                _c("card", {
-                  attrs: {
-                    title: "sample",
-                    text:
-                      "sample text  sample text sample text sample text sample text",
-                    "image-url": "./img/B-I8kLPJ5P7.jpg"
-                  }
-                })
-              ],
-              1
-            ),
+          _c(
+            "div",
+            { staticClass: "p-section" },
+            [
+              _c("h4", { staticClass: "mb-3" }, [_vm._v("List")]),
+              _vm._v(" "),
+              _c("list", {
+                attrs: {
+                  "bg-color": _vm.selectedColor.bgColor,
+                  "text-color": _vm.selectedColor.textColor,
+                  items: [
+                    {
+                      text: "item 01 - no link"
+                    },
+                    {
+                      text: "item 02 - has inner link",
+                      url: "#"
+                    },
+                    {
+                      text: "item 03 - has external link",
+                      url: "https://github.com/DJYoko",
+                      isExternalLink: true
+                    }
+                  ]
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-section" }, [
+            _c("h4", { staticClass: "mb-3" }, [_vm._v("Card")]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-md-6 col-lg-4 mb-4" },
-              [
-                _c("card", {
-                  attrs: {
-                    title: "sample with inner link",
-                    text:
-                      "sample text sample text sample text sample text sample text",
-                    "image-url": "./img/B-I8pXBpMuZ.jpg",
-                    linkUrl: "https://www.instagram.com/p/B-I8pXBpMuZ/"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-md-6 col-lg-4 mb-4" },
-              [
-                _c("card", {
-                  attrs: {
-                    title: "sample with external link",
-                    text:
-                      "sample text sample text sample text sample text sample text ",
-                    "image-url": "./img/B-I9KRBJdDi.jpg",
-                    linkUrl: "https://www.instagram.com/p/B-I9KRBJdDi/",
-                    "is-external-link": true
-                  }
-                })
-              ],
-              1
-            )
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-6 col-lg-4 mb-4" },
+                [
+                  _c("card", {
+                    attrs: {
+                      "bg-color": _vm.selectedColor.bgColor,
+                      "text-color": _vm.selectedColor.textColor,
+                      title: "sample",
+                      text:
+                        "sample text  sample text sample text sample text sample text",
+                      "image-url": "./img/B-I8kLPJ5P7.jpg"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-6 col-lg-4 mb-4" },
+                [
+                  _c("card", {
+                    attrs: {
+                      "bg-color": _vm.selectedColor.bgColor,
+                      "text-color": _vm.selectedColor.textColor,
+                      title: "sample with inner link",
+                      text:
+                        "sample text sample text sample text sample text sample text",
+                      "image-url": "./img/B-I8pXBpMuZ.jpg",
+                      linkUrl: "https://www.instagram.com/p/B-I8pXBpMuZ/"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-6 col-lg-4 mb-4" },
+                [
+                  _c("card", {
+                    attrs: {
+                      "bg-color": _vm.selectedColor.bgColor,
+                      "text-color": _vm.selectedColor.textColor,
+                      title: "sample with external link",
+                      text:
+                        "sample text sample text sample text sample text sample text ",
+                      "image-url": "./img/B-I9KRBJdDi.jpg",
+                      linkUrl: "https://www.instagram.com/p/B-I9KRBJdDi/",
+                      "is-external-link": true
+                    }
+                  })
+                ],
+                1
+              )
+            ])
           ])
-        ])
-      ],
-      1
-    )
-  ])
+        ],
+        1
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -13634,6 +14053,7 @@ var render = function() {
     ],
     staticClass: "p-inputText",
     class: _vm.styleClasses,
+    style: _vm.colorStyles,
     attrs: { disabled: _vm.isDisabled },
     domProps: { value: _vm.form.text },
     on: {
@@ -13679,6 +14099,7 @@ var render = function() {
     ],
     staticClass: "p-inputTextArea",
     class: _vm.styleClasses,
+    style: _vm.colorStyles,
     attrs: { disabled: _vm.isDisabled },
     domProps: { value: _vm.form.text },
     on: {
@@ -13723,6 +14144,8 @@ var render = function() {
             attrs: {
               text: item.text,
               url: item.url,
+              bgColor: _vm.bgColor,
+              textColor: _vm.textColor,
               isExternalLink: item.isExternalLink
             }
           })
@@ -13759,13 +14182,16 @@ var render = function() {
           "a",
           {
             staticClass: "p-listItem__link",
+            style: _vm.colorStyles,
             attrs: { href: _vm.url, target: _vm.targetAttr }
           },
           [_vm._v(_vm._s(_vm.text))]
         )
-      : _c("span", { staticClass: "p-listItem__text" }, [
-          _vm._v(_vm._s(_vm.text))
-        ])
+      : _c(
+          "span",
+          { staticClass: "p-listItem__text", style: _vm.colorStyles },
+          [_vm._v(_vm._s(_vm.text))]
+        )
   ])
 }
 var staticRenderFns = []
@@ -13795,31 +14221,35 @@ var render = function() {
       _c("input", {
         staticClass: "p-singleRadio__radio",
         attrs: { type: "radio", disabled: _vm.isDisabled },
-        domProps: { checked: _vm.form.isChecked }
+        domProps: { checked: _vm.form.isChecked },
+        on: { change: _vm.onChange }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "p-singleRadio__display" }, [
-        _c("div", { staticClass: "p-singleRadio__checkMark" }, [
-          _c(
-            "svg",
-            {
-              staticClass: "bi bi-circle-fill p-singleRadio__checkMarkIcon",
-              attrs: {
-                width: "8px",
-                height: "8px",
-                viewBox: "0 0 16 16",
-                fill: "currentColor",
-                xmlns: "http://www.w3.org/2000/svg"
-              }
-            },
-            [_c("circle", { attrs: { cx: "8", cy: "8", r: "8" } })]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-singleRadio__text" }, [
-          _vm._v("\n        " + _vm._s(_vm.text) + "\n      ")
-        ])
-      ])
+      _c(
+        "div",
+        { staticClass: "p-singleRadio__display", style: _vm.colorStyles },
+        [
+          _c("div", { staticClass: "p-singleRadio__checkMark" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "bi bi-circle-fill p-singleRadio__checkMarkIcon",
+                attrs: {
+                  width: "8px",
+                  height: "8px",
+                  viewBox: "0 0 16 16",
+                  xmlns: "http://www.w3.org/2000/svg"
+                }
+              },
+              [_c("circle", { attrs: { cx: "8", cy: "8", r: "8" } })]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-singleRadio__text" }, [
+            _vm._v("\n        " + _vm._s(_vm.text) + "\n      ")
+          ])
+        ]
+      )
     ])
   ])
 }

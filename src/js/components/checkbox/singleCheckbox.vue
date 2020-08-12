@@ -7,7 +7,7 @@
         :checked="form.isChecked"
         :disabled="isDisabled"
       />
-      <div class="p-singleCheckbox__display">
+      <div class="p-singleCheckbox__display" :style="colorStyles">
         <div class="p-singleCheckbox__checkMark">
           <svg
             class="p-singleCheckbox__checkMarkIcon bi bi-check"
@@ -35,6 +35,14 @@ export default {
   name: 'singleCheckbox',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       required: true,
@@ -60,6 +68,12 @@ export default {
     }
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     styleClasses() {
       const classList = []
 
