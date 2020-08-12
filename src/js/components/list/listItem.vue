@@ -5,9 +5,10 @@
       v-if="url !== ''"
       :href="url"
       :target="targetAttr"
+      :style="colorStyles"
       >{{ text }}</a
     >
-    <span class="p-listItem__text" v-else>{{ text }}</span>
+    <span class="p-listItem__text" v-else :style="colorStyles">{{ text }}</span>
   </li>
 </template>
 
@@ -15,6 +16,14 @@
 export default {
   name: 'listItem',
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       default: '',
@@ -29,6 +38,12 @@ export default {
     },
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     targetAttr() {
       return this.$props.isExternalLink ? '_blank' : ''
     },
@@ -37,13 +52,11 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 $shadowDepthMin: 1px;
 
 .p-listItem {
   list-style: none;
-
-  background-color: #e6e7ee;
 
   &:first-child {
     .p-listItem__link,
