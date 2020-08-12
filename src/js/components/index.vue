@@ -2,12 +2,28 @@
   <div
     class="p-index"
     :style="{
-      backgroundColor: bgColor,
-      color: textColor,
+      backgroundColor: selectedColor.bgColor,
+      color: selectedColor.textColor,
     }"
   >
     <div class="container">
       <greeting />
+      <div>
+        <h2>select color mode</h2>
+        <singleRadio
+          v-for="item in colorSchema"
+          :key="item.index"
+          :is-inline="true"
+          :is-checked="selectedColorName === item.name"
+          class="mb-4"
+          :text="item.name"
+          :bg-color="item.bgColor"
+          :text-color="item.textColor"
+          :item-value="item.name"
+          @onChange="onChangeColor"
+        />
+      </div>
+
       <div class="p-section">
         <h4 class="mb-3">button</h4>
         <singleButton class="mr-4" text="button default" />
@@ -170,18 +186,41 @@ export default {
     list,
     card,
   },
-  props: {},
+  props: {
+    colorSchema: {
+      type: Array,
+      default: () => {
+        return [
+          {
+            name: 'default',
+            bgColor: '#e6e7ee',
+            textColor: '#212529',
+          },
+          {
+            name: 'dark',
+            bgColor: '#212529',
+            textColor: '#e6e7ee',
+          },
+        ]
+      },
+    },
+  },
   data: function() {
     return {
-      bgColor: '#e6e7ee',
-      textColor: '#212529',
+      selectedColorName: 'default',
     }
   },
-  computed: {},
+  computed: {
+    selectedColor() {
+      return this.$props.colorSchema.filter((item) => {
+        return this.selectedColorName === item.name
+      })[0]
+    },
+  },
   methods: {
-    onChangeColor(payload) {
-      this.bgColor = payload.bgColor
-      this.textColor = payload.textColor
+    onChangeColor(colorName) {
+      console.log(colorName)
+      this.selectedColorName = colorName
     },
   },
 }
