@@ -15,7 +15,7 @@
           :key="item.index"
           :is-inline="true"
           :is-checked="selectedColorName === item.name"
-          class="mb-4"
+          class="mb-4 mr-4"
           :text="item.name"
           :bg-color="item.bgColor"
           :text-color="item.textColor"
@@ -199,6 +199,16 @@ export default {
           {
             name: 'dark',
             bgColor: '#212529',
+            textColor: '#e6e7ee',
+          },
+          {
+            name: 'navy',
+            bgColor: '#00327C',
+            textColor: '#e6e7ee',
+          },
+          {
+            name: 'red',
+            bgColor: '#A51D31',
             textColor: '#e6e7ee',
           },
         ]
