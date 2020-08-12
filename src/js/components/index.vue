@@ -1,5 +1,12 @@
 <template>
   <div class="p-index">
+  <div
+    class="p-index"
+    :style="{
+      backgroundColor: bgColor,
+      color: textColor,
+    }"
+  >
     <div class="container">
       <greeting />
       <div class="p-section">
@@ -166,9 +173,17 @@ export default {
   },
   props: {},
   data: function() {
-    return {}
+    return {
+      bgColor: '#e6e7ee',
+      textColor: '#212529',
+    }
   },
   computed: {},
-  methods: {},
+  methods: {
+    onChangeColor(payload) {
+      this.bgColor = payload.bgColor
+      this.textColor = payload.textColor
+    },
+  },
 }
 </script>
