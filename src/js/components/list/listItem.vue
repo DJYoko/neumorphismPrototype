@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 $shadowDepthMin: 1px;
 
 .p-listItem {

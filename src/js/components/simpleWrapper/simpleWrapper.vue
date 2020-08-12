@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 .p-simpleWrapper {
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);

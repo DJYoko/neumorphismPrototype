@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 .p-list {
   appearance: none;
   border: none;

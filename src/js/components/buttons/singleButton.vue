@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 .p-singleButton {
   appearance: none;
   border: none;

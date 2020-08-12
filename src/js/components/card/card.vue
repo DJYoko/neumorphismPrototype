@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 .p-card {
   appearance: none;
   border: none;
