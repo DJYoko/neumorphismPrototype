@@ -1,5 +1,4 @@
 <template>
-  <div class="p-index">
   <div
     class="p-index"
     :style="{
