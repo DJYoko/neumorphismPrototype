@@ -6,6 +6,7 @@
         class="p-singleRadio__radio"
         :checked="form.isChecked"
         :disabled="isDisabled"
+        @change="onChange"
       />
       <div class="p-singleRadio__display">
         <div class="p-singleRadio__checkMark">
@@ -49,6 +50,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    itemValue: {
+      type: String,
+      default: '',
+    },
+  },
+  watch: {
+    isChecked: {
+      immediate: true,
+      handler() {
+        this.form.isChecked = this.$props.isChecked
+      },
+    },
   },
   data: function() {
     return {
@@ -75,10 +88,11 @@ export default {
       return classList.join(' ')
     },
   },
-  created() {
-    this.form.isChecked = this.$props.isChecked
+  methods: {
+    onChange() {
+      this.$emit('onChange', this.$props.itemValue)
+    },
   },
-  methods: {},
 }
 </script>
 
