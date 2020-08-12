@@ -5,6 +5,8 @@
       :key="item.index"
       :text="item.text"
       :url="item.url"
+      :bgColor="bgColor"
+      :textColor="textColor"
       :isExternalLink="item.isExternalLink"
     />
   </ul>
@@ -19,6 +21,14 @@ export default {
     listItem,
   },
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     items: {
       type: Array,
       default: () => {
@@ -30,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 .p-list {
   appearance: none;
   border: none;

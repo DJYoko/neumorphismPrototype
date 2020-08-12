@@ -6,15 +6,15 @@
         class="p-singleRadio__radio"
         :checked="form.isChecked"
         :disabled="isDisabled"
+        @change="onChange"
       />
-      <div class="p-singleRadio__display">
+      <div class="p-singleRadio__display" :style="colorStyles">
         <div class="p-singleRadio__checkMark">
           <svg
             width="8px"
             height="8px"
             viewBox="0 0 16 16"
             class="bi bi-circle-fill p-singleRadio__checkMarkIcon"
-            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle cx="8" cy="8" r="8" />
@@ -33,6 +33,14 @@ export default {
   name: 'singleRadio',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       required: true,
@@ -49,6 +57,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    itemValue: {
+      type: String,
+      default: '',
+    },
+  },
+  watch: {
+    isChecked: {
+      immediate: true,
+      handler() {
+        this.form.isChecked = this.$props.isChecked
+      },
+    },
   },
   data: function() {
     return {
@@ -58,6 +78,12 @@ export default {
     }
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     styleClasses() {
       const classList = []
 
@@ -75,15 +101,16 @@ export default {
       return classList.join(' ')
     },
   },
-  created() {
-    this.form.isChecked = this.$props.isChecked
+  methods: {
+    onChange() {
+      this.$emit('onChange', this.$props.itemValue)
+    },
   },
-  methods: {},
 }
 </script>
 
 <style lang="scss">
-$shadowDepth: 4px;
+$shadowDepth: 2px;
 $shadowDepthMin: 1px;
 
 .p-singleRadio {

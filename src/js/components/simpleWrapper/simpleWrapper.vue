@@ -1,20 +1,12 @@
 <template>
-  <div class="p-card" :style="colorStyles">
-    <div
-      class="p-card__image"
-      :style="`background-image:url(${imageUrl});`"
-    ></div>
-    <h5 class="p-card__title">{{ title }}</h5>
-    <div class="p-card__text">{{ text }}</div>
-    <a class="p-card__link" :href="linkUrl" v-if="linkUrl" :target="targetAttr"
-      >show more</a
-    >
+  <div class="p-simpleWrapper" :style="colorStyles">
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'card',
+  name: 'simpleWrapper',
   components: {},
   props: {
     bgColor: {
@@ -25,23 +17,15 @@ export default {
       type: String,
       default: '',
     },
-    title: {
-      type: String,
-      default: '',
-    },
     text: {
       type: String,
-      default: '',
+      required: true,
     },
-    imageUrl: {
-      type: String,
-      default: '',
+    isFocus: {
+      type: Boolean,
+      default: false,
     },
-    linkUrl: {
-      type: String,
-      default: '',
-    },
-    isExternalLink: {
+    isDisabled: {
       type: Boolean,
       default: false,
     },
@@ -56,18 +40,14 @@ export default {
         color: this.$props.textColor,
       }
     },
-    targetAttr() {
-      return this.$props.isExternalLink ? '_blank' : ''
-    },
   },
+  methods: {},
 }
 </script>
 
 <style lang="scss">
 $shadowDepth: 2px;
-.p-card {
-  appearance: none;
-  border: none;
+.p-simpleWrapper {
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #e6e7ee;
@@ -79,15 +59,7 @@ $shadowDepth: 2px;
     inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
   ;
   border-radius: 20px;
-  justify-content: center;
-  padding: 32px;
-
-  .p-card__image {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 200px;
-  }
+  padding: 16px 32px;
+  transition: all 0.2s ease-out;
 }
 </style>
