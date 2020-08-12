@@ -13772,12 +13772,12 @@ var render = function() {
               }
             },
             [
-              _c("h2", [_vm._v("select color mode")]),
+              _c("h2", { staticClass: "mb-2" }, [_vm._v("select color mode")]),
               _vm._v(" "),
               _vm._l(_vm.colorSchema, function(item) {
                 return _c("singleRadio", {
                   key: item.index,
-                  staticClass: "mb-4 mr-4",
+                  staticClass: "mb-2 mr-2",
                   attrs: {
                     "is-inline": true,
                     "is-checked": _vm.selectedColorName === item.name,

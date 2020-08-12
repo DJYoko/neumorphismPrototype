@@ -12,13 +12,13 @@
         :bg-color="colorSchema[0].bgColor"
         :text-color="colorSchema[0].textColor"
       >
-        <h2>select color mode</h2>
+        <h2 class="mb-2">select color mode</h2>
         <singleRadio
           v-for="item in colorSchema"
           :key="item.index"
           :is-inline="true"
           :is-checked="selectedColorName === item.name"
-          class="mb-4 mr-4"
+          class="mb-2 mr-2"
           :text="item.name"
           :bg-color="item.bgColor"
           :text-color="item.textColor"
