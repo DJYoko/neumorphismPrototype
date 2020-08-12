@@ -8,7 +8,7 @@
         :disabled="isDisabled"
         @change="onChange"
       />
-      <div class="p-singleRadio__display">
+      <div class="p-singleRadio__display" :style="colorStyles">
         <div class="p-singleRadio__checkMark">
           <svg
             width="8px"
@@ -33,6 +33,14 @@ export default {
   name: 'singleRadio',
   components: {},
   props: {
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    textColor: {
+      type: String,
+      default: '',
+    },
     text: {
       type: String,
       required: true,
@@ -70,6 +78,12 @@ export default {
     }
   },
   computed: {
+    colorStyles() {
+      return {
+        backgroundColor: this.$props.bgColor,
+        color: this.$props.textColor,
+      }
+    },
     styleClasses() {
       const classList = []
 
