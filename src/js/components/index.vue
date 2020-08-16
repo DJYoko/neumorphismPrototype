@@ -159,49 +159,65 @@
         <h4 class="mb-3">Radio</h4>
         <h5>block mode</h5>
         <singleRadio
+          item-value="1"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-checked="radioCheckedItemValue === '1'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="2"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button checked"
-          :is-checked="true"
+          :is-checked="radioCheckedItemValue === '2'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="3"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button disabled"
           :is-disabled="true"
+          :is-checked="radioCheckedItemValue === '3'"
+          @onChange="onChangeRadio"
         />
 
         <h5>inline mode</h5>
         <singleRadio
+          item-value="4"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button default"
+          :is-checked="radioCheckedItemValue === '4'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="5"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button checked"
-          :is-checked="true"
+          :is-checked="radioCheckedItemValue === '5'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="6"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button disabled"
           :is-disabled="true"
+          :is-checked="radioCheckedItemValue === '6'"
+          @onChange="onChangeRadio"
         />
       </div>
 
@@ -351,6 +367,7 @@ export default {
   },
   data: function() {
     return {
+      radioCheckedItemValue: '2',
       checkboxState: false,
       selectedColorName: 'default',
       buttonFocusedState: false,
@@ -364,8 +381,10 @@ export default {
     },
   },
   methods: {
+    onChangeRadio(payload) {
+      this.radioCheckedItemValue = payload
+    },
     onChangeCheckbox(payload) {
-      console.log(payload)
       this.checkboxState = payload
     },
     toggleStateButton() {
