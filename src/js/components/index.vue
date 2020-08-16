@@ -34,6 +34,8 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-focus="buttonFocusedState"
+          @toggleState="toggleStateButton"
         />
         <singleButton
           class="mr-4"
@@ -346,6 +348,7 @@ export default {
   data: function() {
     return {
       selectedColorName: 'default',
+      buttonFocusedState: false,
     }
   },
   computed: {
@@ -356,6 +359,9 @@ export default {
     },
   },
   methods: {
+    toggleStateButton() {
+      this.buttonFocusedState = !this.buttonFocusedState
+    },
     onChangeColor(colorName) {
       console.log(colorName)
       this.selectedColorName = colorName
