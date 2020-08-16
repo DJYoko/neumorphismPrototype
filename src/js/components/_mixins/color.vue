@@ -52,12 +52,47 @@ export default {
         inset 0 0 0 0
         rgba(255, 255, 255, 0.5)`
     },
+    shadowStyleFocused() {
+      return `
+        0
+        0
+        0
+        0
+        rgba(0, 0, 0, 0.25),
+        0
+        0
+        0
+        0
+        rgba(255, 255, 255, 0.5),
+        inset
+        ${this.$props.shadowDepth * 3}px
+        ${this.$props.shadowDepth * 3}px
+        ${this.$props.shadowDepth * 4}px
+        0
+        rgba(0, 0, 0, 0.25),
+        inset
+        ${this.$props.shadowDepth * -2}px
+        ${this.$props.shadowDepth * -2}px
+        ${this.$props.shadowDepth * 3}px
+        0
+        rgba(255, 255, 255, 0.5)
+      `
+    },
     colorStyles() {
-      return {
-        boxShadow: this.shadowStyle,
+      const styles = {
         backgroundColor: this.$props.bgColor,
         color: this.$props.textColor,
       }
+
+      if (this.isDisabled) {
+        styles.boxShadow = 'none'
+      } else if (this.isFocus) {
+        styles.boxShadow = this.shadowStyleFocused
+      } else {
+        styles.boxShadow = this.shadowStyle
+      }
+
+      return styles
     },
     styleClasses() {
       const classList = []
@@ -74,7 +109,6 @@ export default {
       if (this.$props.isChecked) {
         classList.push('is-checked')
       }
-
       return classList.join(' ')
     },
   },
