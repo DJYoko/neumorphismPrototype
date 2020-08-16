@@ -56,13 +56,6 @@ $shadowDepth: 2px;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #e6e7ee;
-  // prettier-ignore
-  box-shadow:
-    calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
-    calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
-  ;
   border-radius: 20px;
   justify-content: center;
   padding: 32px;
