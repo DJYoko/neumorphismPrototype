@@ -109,6 +109,8 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-checked="checkboxState"
+          @onChange="onChangeCheckbox"
         />
         <singleCheckbox
           class="mb-4"
@@ -131,14 +133,16 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button default"
+          @onChange="onChangeCheckbox"
+          text="checkbox default"
+          :is-checked="checkboxState"
         />
         <singleCheckbox
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button checked"
+          text="checkbox checked"
           :is-checked="true"
         />
         <singleCheckbox
@@ -146,7 +150,7 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button disabled"
+          text="checkbox disabled"
           :is-disabled="true"
         />
       </div>
@@ -347,6 +351,7 @@ export default {
   },
   data: function() {
     return {
+      checkboxState: false,
       selectedColorName: 'default',
       buttonFocusedState: false,
     }
@@ -359,6 +364,10 @@ export default {
     },
   },
   methods: {
+    onChangeCheckbox(payload) {
+      console.log(payload)
+      this.checkboxState = payload
+    },
     toggleStateButton() {
       this.buttonFocusedState = !this.buttonFocusedState
     },
