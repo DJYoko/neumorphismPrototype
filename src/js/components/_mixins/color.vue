@@ -10,6 +10,14 @@ export default {
       type: String,
       default: '',
     },
+    isInline: {
+      type: Boolean,
+      default: false,
+    },
+    isChecked: {
+      type: Boolean,
+      default: false,
+    },
     isFocus: {
       type: Boolean,
       default: false,
@@ -37,6 +45,12 @@ export default {
       }
       if (this.$props.isDisabled) {
         classList.push('is-disabled')
+      }
+      if (this.$props.isInline) {
+        classList.push('is-inline')
+      }
+      if (this.$props.isChecked) {
+        classList.push('is-checked')
       }
 
       return classList.join(' ')
