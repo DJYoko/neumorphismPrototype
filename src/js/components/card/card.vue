@@ -13,18 +13,12 @@
 </template>
 
 <script>
+import color from '../_mixins/color'
+
 export default {
   name: 'card',
-  components: {},
+  mixins: [color],
   props: {
-    bgColor: {
-      type: String,
-      default: '',
-    },
-    textColor: {
-      type: String,
-      default: '',
-    },
     title: {
       type: String,
       default: '',
@@ -46,16 +40,7 @@ export default {
       default: false,
     },
   },
-  data: function() {
-    return {}
-  },
   computed: {
-    colorStyles() {
-      return {
-        backgroundColor: this.$props.bgColor,
-        color: this.$props.textColor,
-      }
-    },
     targetAttr() {
       return this.$props.isExternalLink ? '_blank' : ''
     },
