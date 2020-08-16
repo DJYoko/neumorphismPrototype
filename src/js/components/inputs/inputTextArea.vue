@@ -3,6 +3,7 @@
     class="p-inputTextArea"
     :class="styleClasses"
     :disabled="isDisabled"
+    :style="colorStyles"
     v-model="form.text"
   />
 </template>
@@ -25,6 +26,18 @@ export default {
       },
     }
   },
+  computed: {
+    colorStyles() {
+      const styles = {}
+
+      if (this.isDisabled) {
+        styles.boxShadow = 'none'
+      } else {
+        styles.boxShadow = this.shadowStyleFocused
+      }
+      return styles
+    },
+  },
   created() {
     this.form.text = this.$props.text
   },
@@ -39,13 +52,6 @@ $depth: 2px;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #e6e7ee;
-  // prettier-ignore
-  box-shadow:
-    calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-    calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-    inset calc(#{$depth} * 3) calc(#{$depth} * 3) calc(#{$depth} * 4) 0 rgba(0, 0, 0, 0.25),
-    inset calc(#{$depth} * -2) calc(#{$depth} * -2) calc(#{$depth} * 3) 0 rgba(255, 255, 255, 0.5)
-  ;
   border-radius: 20px;
   justify-content: center;
   padding: 16px 32px;
@@ -58,19 +64,12 @@ $depth: 2px;
   &:focus,
   &.is-focus {
     outline: none;
-    // prettier-ignore
-    box-shadow:
-      calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-      inset calc(#{$depth}) calc(#{$depth}) calc(#{$depth} * 2) 0 rgba(0, 0, 0, 0.25),
-      inset calc(0px) calc(0px) calc(#{$depth}) 0 rgba(255, 255, 255, 0.5)
-    ;
   }
 
   &:disabled,
   &.is-disabled {
     cursor: not-allowed;
-    box-shadow: none;
+
     // border-top: 1px solid rgba(255, 255, 255, 0.5);
     // border-left: 1px solid rgba(255, 255, 255, 0.5);
     // border-right: 1px solid rgba(0, 0, 0, 0.25);
