@@ -3,7 +3,6 @@
     class="p-inputText"
     :class="styleClasses"
     :disabled="isDisabled"
-    :style="colorStyles"
     v-model="form.text"
   />
 </template>
