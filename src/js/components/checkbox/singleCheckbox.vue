@@ -6,6 +6,7 @@
         class="p-singleCheckbox__checkbox"
         :checked="form.isChecked"
         :disabled="isDisabled"
+        @change="onChange"
       />
       <div class="p-singleCheckbox__display" :style="colorStyles">
         <div class="p-singleCheckbox__checkMark">
@@ -48,11 +49,14 @@ export default {
       },
     }
   },
-
   created() {
     this.form.isChecked = this.$props.isChecked
   },
-  methods: {},
+  methods: {
+    onChange(event) {
+      this.$emit('onChange', event.target.checked)
+    },
+  },
 }
 </script>
 
@@ -81,13 +85,6 @@ $shadowDepthMin: 1px;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #e6e7ee;
-  // prettier-ignore
-  box-shadow:
-    calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
-    calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
-  ;
   border-radius: 20px;
   justify-content: center;
   padding: 24px 32px;
@@ -96,12 +93,6 @@ $shadowDepthMin: 1px;
   .p-singleCheckbox.is-checked & {
     outline: none;
     // prettier-ignore
-    box-shadow:
-      calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-      inset calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
-      inset calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5)
-    ;
   }
 
   .p-singleCheckbox__checkbox:disabled ~ &,
