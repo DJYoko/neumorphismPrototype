@@ -29,33 +29,14 @@
 </template>
 
 <script>
+import color from '../_mixins/color'
 export default {
   name: 'singleRadio',
-  components: {},
+  mixins: [color],
   props: {
-    bgColor: {
-      type: String,
-      default: '',
-    },
-    textColor: {
-      type: String,
-      default: '',
-    },
     text: {
       type: String,
       required: true,
-    },
-    isInline: {
-      type: Boolean,
-      default: false,
-    },
-    isChecked: {
-      type: Boolean,
-      default: false,
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false,
     },
     itemValue: {
       type: String,
@@ -76,30 +57,6 @@ export default {
         isChecked: false,
       },
     }
-  },
-  computed: {
-    colorStyles() {
-      return {
-        backgroundColor: this.$props.bgColor,
-        color: this.$props.textColor,
-      }
-    },
-    styleClasses() {
-      const classList = []
-
-      if (this.$props.isInline) {
-        classList.push('is-inline')
-      }
-
-      if (this.$props.isChecked) {
-        classList.push('is-checked')
-      }
-      if (this.$props.isDisabled) {
-        classList.push('is-disabled')
-      }
-
-      return classList.join(' ')
-    },
   },
   methods: {
     onChange() {
