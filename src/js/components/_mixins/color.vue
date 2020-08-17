@@ -35,6 +35,15 @@ export default {
     return {}
   },
   computed: {
+    whiteShadowColor() {
+      const bgColors = this.rgbToArray(this.$props.bgColor)
+      const baseWhiteColor = [255, 255, 255]
+
+      const averageRed = Math.floor((bgColors[0] + baseWhiteColor[0]) / 2)
+      const averageGreen = Math.floor((bgColors[1] + baseWhiteColor[1]) / 2)
+      const averageBlue = Math.floor((bgColors[2] + baseWhiteColor[2]) / 2)
+      return `rgba(${averageRed}, ${averageGreen}, ${averageBlue}, 0.5)`
+    },
     shadowStyle() {
       return `
         ${this.$props.shadowDepth * 3}px
@@ -46,11 +55,11 @@ export default {
         ${this.$props.shadowDepth * -2}px
         ${this.$props.shadowDepth * 3}px
         0
-        rgba(255, 255, 255, 0.5),
+        ${this.whiteShadowColor},
         inset 0 0 0 0
         rgba(0, 0, 0, 0.25),
         inset 0 0 0 0
-        rgba(255, 255, 255, 0.5)`
+        ${this.whiteShadowColor}`
     },
     shadowStyleFocused() {
       return `
@@ -63,7 +72,7 @@ export default {
         0
         0
         0
-        rgba(255, 255, 255, 0.5),
+        ${this.whiteShadowColor},
         inset
         ${this.$props.shadowDepth * 3}px
         ${this.$props.shadowDepth * 3}px
@@ -75,7 +84,7 @@ export default {
         ${this.$props.shadowDepth * -2}px
         ${this.$props.shadowDepth * 3}px
         0
-        rgba(255, 255, 255, 0.5)
+        ${this.whiteShadowColor}
       `
     },
     shadowStyleChecked() {
@@ -140,6 +149,15 @@ export default {
       return classList.join(' ')
     },
   },
-  methods: {},
+  methods: {
+    rgbToArray(rgbText) {
+      return rgbText
+        .replace(/[rgb\(|)]/g, '')
+        .split(',')
+        .map((item) => {
+          return parseInt(item)
+        })
+    },
+  },
 }
 </script>
