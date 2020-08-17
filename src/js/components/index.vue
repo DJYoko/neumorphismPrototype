@@ -19,7 +19,6 @@
           :is-inline="true"
           :is-checked="selectedColorName === item.name"
           class="mb-2 mr-2"
-          :text="item.name"
           :bg-color="item.bgColor"
           :text-color="item.textColor"
           :item-value="item.name"
