@@ -36,13 +36,33 @@ export default {
   },
   computed: {
     whiteShadowColor() {
+      // calculate shadow color (enhance)
+      // whiter color parts has whiter shadow
+      // darker color parts has darker shadow
+
       const bgColors = this.rgbToArray(this.$props.bgColor)
       const baseWhiteColor = [255, 255, 255]
 
-      const averageRed = Math.floor((bgColors[0] + baseWhiteColor[0]) / 2)
-      const averageGreen = Math.floor((bgColors[1] + baseWhiteColor[1]) / 2)
-      const averageBlue = Math.floor((bgColors[2] + baseWhiteColor[2]) / 2)
-      return `rgba(${averageRed}, ${averageGreen}, ${averageBlue}, 0.5)`
+      const isWhiteSide = bgColors[0] + bgColors[1] + bgColors[0] > 768 / 2
+
+      const average = {
+        red: 0,
+        green: 0,
+        blue: 0,
+      }
+
+      // prettier-ignore
+      if (isWhiteSide) {
+        average.red =   Math.floor((bgColors[0] + baseWhiteColor[0] * 3) / 4)
+        average.green = Math.floor((bgColors[1] + baseWhiteColor[1] * 3) / 4)
+        average.blue =  Math.floor((bgColors[2] + baseWhiteColor[2] * 3) / 4)
+      } else {
+        average.red =   Math.floor((bgColors[0] * 3 + baseWhiteColor[0]) / 4)
+        average.green = Math.floor((bgColors[1] * 3 + baseWhiteColor[1]) / 4)
+        average.blue =  Math.floor((bgColors[2] * 3 + baseWhiteColor[2]) / 4)
+      }
+
+      return `rgba(${average.red}, ${average.green}, ${average.blue}, 0.5)`
     },
     shadowStyle() {
       return `
