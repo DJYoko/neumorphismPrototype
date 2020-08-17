@@ -318,7 +318,7 @@ export default {
           },
           {
             name: 'dark',
-            bgColor: 'rgba(33,37,41)',
+            bgColor: 'rgb(33,37,41)',
             textColor: 'rgb(230,231,238)',
           },
           {
