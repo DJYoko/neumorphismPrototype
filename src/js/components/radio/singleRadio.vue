@@ -20,7 +20,7 @@
             <circle cx="8" cy="8" r="8" />
           </svg>
         </div>
-        <div class="p-singleRadio__text">
+        <div class="p-singleRadio__text" v-if="text !== ''">
           {{ text }}
         </div>
       </div>
@@ -118,7 +118,6 @@ $shadowDepthMin: 1px;
     width: 24px;
     height: 24px;
     vertical-align: bottom;
-    margin-right: 8px;
     position: relative;
     appearance: none;
     border: none;
@@ -175,6 +174,7 @@ $shadowDepthMin: 1px;
   .p-singleRadio__text {
     display: inline-block;
     line-height: 24px;
+    margin-left: 8px;
   }
 }
 </style>
