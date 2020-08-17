@@ -20,7 +20,7 @@
             <circle cx="8" cy="8" r="8" />
           </svg>
         </div>
-        <div class="p-singleRadio__text">
+        <div class="p-singleRadio__text" v-if="text !== ''">
           {{ text }}
         </div>
       </div>
@@ -29,33 +29,14 @@
 </template>
 
 <script>
+import color from '../_mixins/color'
 export default {
   name: 'singleRadio',
-  components: {},
+  mixins: [color],
   props: {
-    bgColor: {
-      type: String,
-      default: '',
-    },
-    textColor: {
-      type: String,
-      default: '',
-    },
     text: {
       type: String,
-      required: true,
-    },
-    isInline: {
-      type: Boolean,
-      default: false,
-    },
-    isChecked: {
-      type: Boolean,
-      default: false,
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false,
+      default: '',
     },
     itemValue: {
       type: String,
@@ -76,30 +57,6 @@ export default {
         isChecked: false,
       },
     }
-  },
-  computed: {
-    colorStyles() {
-      return {
-        backgroundColor: this.$props.bgColor,
-        color: this.$props.textColor,
-      }
-    },
-    styleClasses() {
-      const classList = []
-
-      if (this.$props.isInline) {
-        classList.push('is-inline')
-      }
-
-      if (this.$props.isChecked) {
-        classList.push('is-checked')
-      }
-      if (this.$props.isDisabled) {
-        classList.push('is-disabled')
-      }
-
-      return classList.join(' ')
-    },
   },
   methods: {
     onChange() {
@@ -134,13 +91,6 @@ $shadowDepthMin: 1px;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #e6e7ee;
-  // prettier-ignore
-  box-shadow:
-    calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
-    calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-    inset calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5)
-  ;
   border-radius: 20px;
   justify-content: center;
   padding: 24px 32px;
@@ -148,13 +98,6 @@ $shadowDepthMin: 1px;
   .p-singleRadio__radio:checked ~ &,
   .p-singleRadio.is-checked & {
     outline: none;
-    // prettier-ignore
-    box-shadow:
-      calc(0px) calc(0px) calc(0px) 0 rgba(0, 0, 0, 0.25),
-      calc(0px) calc(0px) calc(0px) 0 rgba(255, 255, 255, 0.5),
-      inset calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 3) calc(#{$shadowDepth} * 4) 0 rgba(0, 0, 0, 0.25),
-      inset calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * -2) calc(#{$shadowDepth} * 3) 0 rgba(255, 255, 255, 0.5)
-    ;
   }
 
   .p-singleRadio__radio:disabled ~ &,
@@ -175,7 +118,6 @@ $shadowDepthMin: 1px;
     width: 24px;
     height: 24px;
     vertical-align: bottom;
-    margin-right: 8px;
     position: relative;
     appearance: none;
     border: none;
@@ -232,6 +174,7 @@ $shadowDepthMin: 1px;
   .p-singleRadio__text {
     display: inline-block;
     line-height: 24px;
+    margin-left: 8px;
   }
 }
 </style>

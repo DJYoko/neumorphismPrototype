@@ -17,10 +17,6 @@ export default {
       type: String,
       default: '',
     },
-    text: {
-      type: String,
-      required: true,
-    },
     isFocus: {
       type: Boolean,
       default: false,

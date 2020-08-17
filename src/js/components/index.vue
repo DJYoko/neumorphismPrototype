@@ -9,17 +9,16 @@
     <div class="container">
       <greeting />
       <simpleWrapper
-        :bg-color="colorSchema[0].bgColor"
-        :text-color="colorSchema[0].textColor"
+        :bg-color="colorScheme[0].bgColor"
+        :text-color="colorScheme[0].textColor"
       >
-        <h2 class="mb-2">select color mode</h2>
+        <h2 class="mb-2">select color</h2>
         <singleRadio
-          v-for="item in colorSchema"
+          v-for="item in colorScheme"
           :key="item.index"
           :is-inline="true"
           :is-checked="selectedColorName === item.name"
           class="mb-2 mr-2"
-          :text="item.name"
           :bg-color="item.bgColor"
           :text-color="item.textColor"
           :item-value="item.name"
@@ -34,6 +33,8 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-focus="buttonFocusedState"
+          @toggleState="toggleStateButton"
         />
         <singleButton
           class="mr-4"
@@ -107,6 +108,8 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-checked="checkboxState"
+          @onChange="onChangeCheckbox"
         />
         <singleCheckbox
           class="mb-4"
@@ -129,14 +132,16 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button default"
+          @onChange="onChangeCheckbox"
+          text="checkbox default"
+          :is-checked="checkboxState"
         />
         <singleCheckbox
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button checked"
+          text="checkbox checked"
           :is-checked="true"
         />
         <singleCheckbox
@@ -144,7 +149,7 @@
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
-          text="button disabled"
+          text="checkbox disabled"
           :is-disabled="true"
         />
       </div>
@@ -153,49 +158,65 @@
         <h4 class="mb-3">Radio</h4>
         <h5>block mode</h5>
         <singleRadio
+          item-value="1"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button default"
+          :is-checked="radioCheckedItemValue === '1'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="2"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button checked"
-          :is-checked="true"
+          :is-checked="radioCheckedItemValue === '2'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="3"
           class="mb-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           text="button disabled"
           :is-disabled="true"
+          :is-checked="radioCheckedItemValue === '3'"
+          @onChange="onChangeRadio"
         />
 
         <h5>inline mode</h5>
         <singleRadio
+          item-value="4"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button default"
+          :is-checked="radioCheckedItemValue === '4'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="5"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button checked"
-          :is-checked="true"
+          :is-checked="radioCheckedItemValue === '5'"
+          @onChange="onChangeRadio"
         />
         <singleRadio
+          item-value="6"
           class="mr-4"
           :bg-color="selectedColor.bgColor"
           :text-color="selectedColor.textColor"
           :is-inline="true"
           text="button disabled"
           :is-disabled="true"
+          :is-checked="radioCheckedItemValue === '6'"
+          @onChange="onChangeRadio"
         />
       </div>
 
@@ -270,6 +291,7 @@ import inputTextArea from './inputs/inputTextArea'
 import list from './list/list'
 import card from './card/card'
 import simpleWrapper from './simpleWrapper/simpleWrapper'
+import constants from '../utility/constants'
 
 export default {
   name: 'index',
@@ -284,78 +306,34 @@ export default {
     card,
     simpleWrapper,
   },
-  props: {
-    colorSchema: {
-      type: Array,
-      default: () => {
-        return [
-          {
-            name: 'default',
-            bgColor: '#e6e7ee',
-            textColor: '#212529',
-          },
-          {
-            name: 'dark',
-            bgColor: '#212529',
-            textColor: '#e6e7ee',
-          },
-          {
-            name: 'pale',
-            bgColor: '#D5E0EE',
-            textColor: '#00327C',
-          },
-          {
-            name: 'pale - reverse',
-            bgColor: '#00327C',
-            textColor: '#D5E0EE',
-          },
-          {
-            name: 'turquoise',
-            bgColor: '#01D2D4',
-            textColor: '#00425D',
-          },
-          {
-            name: 'turquoise - reverse',
-            bgColor: '#00425D',
-            textColor: '#01D2D4',
-          },
-          {
-            name: 'seashell',
-            bgColor: '#FFF5EE',
-            textColor: '#B71C1C',
-          },
-          {
-            name: 'seashell - reverse',
-            bgColor: '#B71C1C',
-            textColor: '#FFF5EE',
-          },
-          {
-            name: 'lime',
-            bgColor: '#F9FBE7',
-            textColor: '#827717',
-          },
-          {
-            name: 'lime - reverse',
-            bgColor: '#827717',
-            textColor: '#F9FBE7',
-          },
-        ]
-      },
-    },
-  },
   data: function() {
     return {
+      radioCheckedItemValue: '2',
+      checkboxState: false,
       selectedColorName: 'default',
+      buttonFocusedState: false,
     }
   },
   computed: {
+    colorScheme() {
+      return constants.COLOR_SCHEME
+    },
     selectedColor() {
-      return this.$props.colorSchema.filter((item) => {
+      return this.colorScheme.filter((item) => {
         return this.selectedColorName === item.name
       })[0]
     },
   },
   methods: {
+    onChangeRadio(payload) {
+      this.radioCheckedItemValue = payload
+    },
+    onChangeCheckbox(payload) {
+      this.checkboxState = payload
+    },
+    toggleStateButton() {
+      this.buttonFocusedState = !this.buttonFocusedState
+    },
     onChangeColor(colorName) {
       console.log(colorName)
       this.selectedColorName = colorName
