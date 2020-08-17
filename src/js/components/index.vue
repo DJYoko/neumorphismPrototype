@@ -9,12 +9,12 @@
     <div class="container">
       <greeting />
       <simpleWrapper
-        :bg-color="colorSchema[0].bgColor"
-        :text-color="colorSchema[0].textColor"
+        :bg-color="colorScheme[0].bgColor"
+        :text-color="colorScheme[0].textColor"
       >
-        <h2 class="mb-2">select color mode</h2>
+        <h2 class="mb-2">select color</h2>
         <singleRadio
-          v-for="item in colorSchema"
+          v-for="item in colorScheme"
           :key="item.index"
           :is-inline="true"
           :is-checked="selectedColorName === item.name"
@@ -291,6 +291,7 @@ import inputTextArea from './inputs/inputTextArea'
 import list from './list/list'
 import card from './card/card'
 import simpleWrapper from './simpleWrapper/simpleWrapper'
+import constants from '../utility/constants'
 
 export default {
   name: 'index',
@@ -305,65 +306,6 @@ export default {
     card,
     simpleWrapper,
   },
-  props: {
-    colorSchema: {
-      type: Array,
-      default: () => {
-        return [
-          {
-            name: 'default',
-            bgColor: 'rgb(230,231,238)',
-            textColor: 'rgb(33,37,41)',
-          },
-          {
-            name: 'dark',
-            bgColor: 'rgb(33,37,41)',
-            textColor: 'rgb(230,231,238)',
-          },
-          {
-            name: 'pale',
-            bgColor: 'rgb(213,224,238)',
-            textColor: 'rgb(0,50,124)',
-          },
-          {
-            name: 'pale - reverse',
-            bgColor: 'rgb(0,50,124)',
-            textColor: 'rgb(213,224,238)',
-          },
-          {
-            name: 'turquoise',
-            bgColor: 'rgb(1,210,212)',
-            textColor: 'rgb(0,66,93)',
-          },
-          {
-            name: 'turquoise - reverse',
-            bgColor: 'rgb(0,66,93)',
-            textColor: 'rgb(1,210,212)',
-          },
-          {
-            name: 'seashell',
-            bgColor: 'rgb(255,245,238)',
-            textColor: 'rgb(183,28,28)',
-          },
-          {
-            name: 'seashell - reverse',
-            bgColor: 'rgb(183,28,28)',
-            textColor: 'rgb(255,245,238)',
-          },
-          {
-            name: 'lime',
-            bgColor: 'rgb(249,251,231)',
-            textColor: 'rgb(130,119,23)',
-          },
-          {
-            name: 'lime - reverse',
-            bgColor: 'rgb(130,119,23)',
-            textColor: 'rgb(249,251,231)',
-          },
-        ]
-      },
-    },
-  },
   data: function() {
     return {
       radioCheckedItemValue: '2',
@@ -373,8 +315,11 @@ export default {
     }
   },
   computed: {
+    colorScheme() {
+      return constants.COLOR_SCHEME
+    },
     selectedColor() {
-      return this.$props.colorSchema.filter((item) => {
+      return this.colorScheme.filter((item) => {
         return this.selectedColorName === item.name
       })[0]
     },
