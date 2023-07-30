@@ -1,15 +1,9 @@
 <template>
-  <input
-    class="p-inputText"
-    :class="styleClasses"
-    :disabled="isDisabled"
-    :style="colorStyles"
-    v-model="form.text"
-  />
+  <input class="p-inputText" :class="styleClasses" :disabled="isDisabled" :style="colorStyles" v-model="form.text" />
 </template>
 
 <script>
-import color from '../_mixins/color'
+import color from '../_mixins/color';
 export default {
   name: 'inputText',
   mixins: [color],
@@ -19,31 +13,30 @@ export default {
       required: true,
     },
   },
-  data: function() {
+  data: function () {
     return {
       form: {
         text: '',
       },
-    }
+    };
   },
   computed: {
     colorStyles() {
-      const styles = {}
+      const styles = {};
 
       if (this.isDisabled) {
-        styles.boxShadow = 'none'
+        styles.boxShadow = 'none';
       } else {
-        styles.boxShadow = this.shadowStyleFocused
+        styles.boxShadow = this.shadowStyleFocused;
       }
-      return styles
+      return styles;
     },
   },
 
   created() {
-    this.form.text = this.$props.text
-    console.log(this.colorStyles.boxShadow)
+    this.form.text = this.$props.text;
   },
-}
+};
 </script>
 
 <style lang="scss">

@@ -1,16 +1,7 @@
-import Vue from 'vue'
-import 'babel-polyfill'
-import index from './components/index';
+import { createApp } from 'vue';
+import index from './components/index.vue';
 
-window.addEventListener(
-    'DOMContentLoaded',
-    function () {
-
-        new Vue({
-            components: {
-                index
-            }
-        }).$mount('#app')
-    },
-    false
-)
+(() => {
+  const _app = createApp(index);
+  _app.mount('#app');
+})();

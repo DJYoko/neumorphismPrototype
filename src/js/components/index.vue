@@ -8,10 +8,7 @@
   >
     <div class="container">
       <greeting />
-      <simpleWrapper
-        :bg-color="colorScheme[0].bgColor"
-        :text-color="colorScheme[0].textColor"
-      >
+      <simpleWrapper :bg-color="colorScheme[0].bgColor" :text-color="colorScheme[0].textColor">
         <h2 class="mb-2">select color</h2>
         <singleRadio
           v-for="item in colorScheme"
@@ -28,103 +25,31 @@
 
       <div class="p-section">
         <h4 class="mb-3">button</h4>
-        <singleButton
-          class="mr-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button default"
-          :is-focus="buttonFocusedState"
-          @toggleState="toggleStateButton"
-        />
-        <singleButton
-          class="mr-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button focused"
-          :is-focus="true"
-        />
-        <singleButton
-          class="mr-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button disabled"
-          :is-disabled="true"
-        />
+        <singleButton class="mr-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button default" :is-focus="buttonFocusedState" @toggleState="toggleStateButton" />
+        <singleButton class="mr-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button focused" :is-focus="true" />
+        <singleButton class="mr-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button disabled" :is-disabled="true" />
       </div>
       <div class="p-section">
         <div class="mb-2">
           <h4 class="mb-3">input text</h4>
-          <inputText
-            class="mr-4 mb-2 w-25"
-            text="input default"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
-          <inputText
-            class="mr-4 mb-2 w-25"
-            text="input focused"
-            :is-focus="true"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
-          <inputText
-            class="mr-4 mb-2 w-25"
-            text="input disabled"
-            :is-disabled="true"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
+          <inputText class="mr-4 mb-2 w-25" text="input default" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
+          <inputText class="mr-4 mb-2 w-25" text="input focused" :is-focus="true" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
+          <inputText class="mr-4 mb-2 w-25" text="input disabled" :is-disabled="true" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
         </div>
         <div class="mb-2">
           <h4 class="mb-3">input textarea</h4>
-          <inputTextArea
-            class="mr-4 w-25"
-            text="textarea default"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
-          <inputTextArea
-            class="mr-4 w-25"
-            text="textarea focus"
-            :is-focus="true"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
-          <inputTextArea
-            class="mr-4 w-25"
-            text="textarea disabled"
-            :is-disabled="true"
-            :bg-color="selectedColor.bgColor"
-            :text-color="selectedColor.textColor"
-          />
+          <inputTextArea class="mr-4 w-25" text="textarea default" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
+          <inputTextArea class="mr-4 w-25" text="textarea focus" :is-focus="true" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
+          <inputTextArea class="mr-4 w-25" text="textarea disabled" :is-disabled="true" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" />
         </div>
       </div>
 
       <div class="p-section">
         <h4 class="mb-3">checkbox</h4>
         <h5>block mode</h5>
-        <singleCheckbox
-          class="mb-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button default"
-          :is-checked="checkboxState"
-          @onChange="onChangeCheckbox"
-        />
-        <singleCheckbox
-          class="mb-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button checked"
-          :is-checked="true"
-        />
-        <singleCheckbox
-          class="mb-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          text="button disabled"
-          :is-disabled="true"
-        />
+        <singleCheckbox class="mb-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button default" :is-checked="checkboxState" @onChange="onChangeCheckbox" />
+        <singleCheckbox class="mb-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button checked" :is-checked="true" />
+        <singleCheckbox class="mb-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" text="button disabled" :is-disabled="true" />
 
         <h5>inline mode</h5>
         <singleCheckbox
@@ -136,22 +61,8 @@
           text="checkbox default"
           :is-checked="checkboxState"
         />
-        <singleCheckbox
-          class="mr-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          :is-inline="true"
-          text="checkbox checked"
-          :is-checked="true"
-        />
-        <singleCheckbox
-          class="mr-4"
-          :bg-color="selectedColor.bgColor"
-          :text-color="selectedColor.textColor"
-          :is-inline="true"
-          text="checkbox disabled"
-          :is-disabled="true"
-        />
+        <singleCheckbox class="mr-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" :is-inline="true" text="checkbox checked" :is-checked="true" />
+        <singleCheckbox class="mr-4" :bg-color="selectedColor.bgColor" :text-color="selectedColor.textColor" :is-inline="true" text="checkbox disabled" :is-disabled="true" />
       </div>
 
       <div class="p-section">
@@ -282,16 +193,16 @@
 </template>
 
 <script>
-import greeting from './greeting'
-import singleButton from './buttons/singleButton'
-import singleCheckbox from './checkbox/singleCheckbox'
-import singleRadio from './radio/singleRadio'
-import inputText from './inputs/inputText'
-import inputTextArea from './inputs/inputTextArea'
-import list from './list/list'
-import card from './card/card'
-import simpleWrapper from './simpleWrapper/simpleWrapper'
-import constants from '../utility/constants'
+import greeting from './greeting';
+import singleButton from './buttons/singleButton';
+import singleCheckbox from './checkbox/singleCheckbox';
+import singleRadio from './radio/singleRadio';
+import inputText from './inputs/inputText';
+import inputTextArea from './inputs/inputTextArea';
+import list from './list/list';
+import card from './card/card';
+import simpleWrapper from './simpleWrapper/simpleWrapper';
+import constants from '../utility/constants';
 
 export default {
   name: 'index',
@@ -306,38 +217,37 @@ export default {
     card,
     simpleWrapper,
   },
-  data: function() {
+  data: function () {
     return {
       radioCheckedItemValue: '2',
       checkboxState: false,
       selectedColorName: 'default',
       buttonFocusedState: false,
-    }
+    };
   },
   computed: {
     colorScheme() {
-      return constants.COLOR_SCHEME
+      return constants.COLOR_SCHEME;
     },
     selectedColor() {
       return this.colorScheme.filter((item) => {
-        return this.selectedColorName === item.name
-      })[0]
+        return this.selectedColorName === item.name;
+      })[0];
     },
   },
   methods: {
     onChangeRadio(payload) {
-      this.radioCheckedItemValue = payload
+      this.radioCheckedItemValue = payload;
     },
     onChangeCheckbox(payload) {
-      this.checkboxState = payload
+      this.checkboxState = payload;
     },
     toggleStateButton() {
-      this.buttonFocusedState = !this.buttonFocusedState
+      this.buttonFocusedState = !this.buttonFocusedState;
     },
     onChangeColor(colorName) {
-      console.log(colorName)
-      this.selectedColorName = colorName
+      this.selectedColorName = colorName;
     },
   },
-}
+};
 </script>
