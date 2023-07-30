@@ -225,9 +225,6 @@ export default {
       buttonFocusedState: false,
     };
   },
-  created() {
-    console.log('created');
-  },
   computed: {
     colorScheme() {
       return constants.COLOR_SCHEME;
@@ -249,7 +246,6 @@ export default {
       this.buttonFocusedState = !this.buttonFocusedState;
     },
     onChangeColor(colorName) {
-      console.log(colorName);
       this.selectedColorName = colorName;
     },
   },
